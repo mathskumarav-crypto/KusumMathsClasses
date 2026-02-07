@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPSC Year | Kusum Maths Classes</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701066141"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17701066141');
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="top-bar">
+    <h1>Kusum Maths Classes</h1>
+    <div class="slogan">
+      <span class="slogan-text">Basic Methods</span>
+      <span class="dot">|</span>
+      <span class="slogan-text">Easy Solutions</span>
+    </div>
+  </header>
+
+  <nav class="menu-bar" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="study-material.html">Study Material</a>
+    <a href="contents.html">UPSC CSAT</a>
+    <a href="enroll.html">Enroll</a>
+    <a href="index.html#courses">Courses</a>
+    <a href="index.html#results">Results</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <section class="materials-page" aria-label="UPSC year question bank">
+    <div class="year-header-bar">
+      <h2 id="yearTitle">UPSC PYQs</h2>
+      <a class="year-back" href="upsc.html">Back to Years</a>
+    </div>
+
+    <div class="year-layout" aria-label="UPSC MCQ viewer">
+      <aside class="question-column" aria-label="Question numbers">
+        <div class="question-list" id="questionList"></div>
+      </aside>
+
+      <main class="question-view" aria-live="polite">
+        <div class="question-card">
+          <div class="question-meta">
+            <span id="activeYear">Year</span>
+            <span id="activeQuestion">Question</span>
+          </div>
+          <h3 id="questionText">Select a question to start.</h3>
+          <div class="options" id="options"></div>
+        </div>
+
+        <div class="explain-bar" id="explainBar" hidden>
+          <div class="explain-text" id="explainText">Explanation will appear here.</div>
+          <a class="answer-link" id="answerLink" href="#" target="_blank" rel="noopener">Watch Answer on YouTube</a>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const yearParam = params.get('year');
+    const yearValue = yearParam ? Number(yearParam) : 2024;
+    const questionsPerYear = 80;
+    const selections = new Map();
+
+    const overrides = {
+      "2024-1": {
+        question: "If the ratio of two numbers is 3:5 and their sum is 64, what is the larger number?",
+        options: ["24", "32", "40", "48"],
+        correct: 2,
+        answer: "Sum of parts = 8, each part = 8, larger = 5 x 8 = 40.",
+        youtube: "https://youtube.com/"
+      },
+      "2024-2": {
+        question: "A train travels 120 km in 2 hours. What is its average speed?",
+        options: ["40 km/h", "50 km/h", "60 km/h", "80 km/h"],
+        correct: 2,
+        answer: "Average speed = distance / time = 120 / 2 = 60 km/h.",
+        youtube: "https://youtube.com/"
+      }
+    };
+
+    const questionList = document.getElementById('questionList');
+    const activeYear = document.getElementById('activeYear');
+    const activeQuestion = document.getElementById('activeQuestion');
+    const questionText = document.getElementById('questionText');
+    const optionsWrap = document.getElementById('options');
+    const explainText = document.getElementById('explainText');
+    const answerLink = document.getElementById('answerLink');
+    const explainBar = document.getElementById('explainBar');
+    const yearTitle = document.getElementById('yearTitle');
+    const questionCard = document.querySelector('.question-card');
+
+    let currentQuestion = 1;
+
+    function baseQuestion(number) {
+      return {
+        question: `Question ${number} (${yearValue})`,
+        options: ["Option A", "Option B", "Option C", "Option D"],
+        correct: 0,
+        answer: "Answer explanation will appear here.",
+        youtube: "https://youtube.com/"
+      };
+    }
+
+    function getQuestion(number) {
+      const key = `${yearValue}-${number}`;
+      return overrides[key] || baseQuestion(number);
+    }
+
+    function renderQuestions() {
+      questionList.innerHTML = '';
+      for (let i = 1; i <= questionsPerYear; i += 1) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'question-num';
+        btn.textContent = i;
+        if (i === currentQuestion) btn.classList.add('active');
+        btn.addEventListener('click', () => {
+          currentQuestion = i;
+          renderQuestions();
+          loadQuestion();
+          questionCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        questionList.appendChild(btn);
+      }
+    }
+
+    function optionLetter(index) {
+      return String.fromCharCode(65 + index);
+    }
+
+    function loadQuestion() {
+      const data = getQuestion(currentQuestion);
+      activeYear.textContent = `Year ${yearValue}`;
+      activeQuestion.textContent = `Q${currentQuestion} of ${questionsPerYear}`;
+      questionText.textContent = data.question;
+      optionsWrap.innerHTML = '';
+
+      data.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'option-btn';
+        btn.textContent = `${optionLetter(idx)}. ${opt}`;
+        btn.addEventListener('click', () => {
+          selections.set(`${yearValue}-${currentQuestion}`, idx);
+          updateSelectionState(data);
+          updateAnswerBar(data, idx);
+        });
+        optionsWrap.appendChild(btn);
+      });
+
+      const stored = selections.get(`${yearValue}-${currentQuestion}`);
+      updateSelectionState(data, stored);
+      updateExplainBar(data, stored);
+    }
+
+    function updateSelectionState(data, selectedIndex) {
+      const buttons = optionsWrap.querySelectorAll('.option-btn');
+      buttons.forEach((btn, idx) => {
+        btn.classList.remove('correct', 'wrong', 'selected');
+        if (selectedIndex === undefined) return;
+        if (idx === selectedIndex) {
+          btn.classList.add('selected');
+          if (idx === data.correct) {
+            btn.classList.add('correct');
+          } else {
+            btn.classList.add('wrong');
+          }
+        }
+      });
+    }
+
+    function updateExplainBar(data, selectedIndex) {
+      const correctText = `${optionLetter(data.correct)}. ${data.options[data.correct]}`;
+      if (selectedIndex === undefined) {
+        explainBar.hidden = true;
+        explainText.textContent = '';
+      } else {
+        explainBar.hidden = false;
+        explainText.textContent = `Correct Answer: ${correctText} — ${data.answer}`;
+      }
+      answerLink.href = data.youtube;
+    }
+
+    yearTitle.textContent = `UPSC PYQs ${yearValue}`;
+    renderQuestions();
+    loadQuestion();
+  </script>
+
+</body>
+</html>
+
+
