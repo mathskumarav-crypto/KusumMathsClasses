@@ -13,6 +13,7 @@
 
 body {
   background-color: #f9fafc;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -1075,5 +1076,67 @@ body {
   .social-bar a {
     width: 40px;
     height: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .top-bar {
+    height: auto;
+    padding: 16px 12px 18px;
+  }
+
+  .top-bar h1 {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .slogan {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .slogan-text {
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+  }
+
+  .menu-bar {
+    gap: 10px 14px;
+    padding: 12px 12px;
+  }
+
+  .menu-bar a {
+    font-size: 0.95rem;
+  }
+
+  .live-classes {
+    margin: 26px 12px 40px;
+    padding: 20px 16px 22px;
+  }
+
+  .live-links,
+  .live-socials {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .social-btn {
+    justify-content: center;
+  }
+
+  .social-bar {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin: 18px auto 0;
+  }
+
+  .contact-float,
+  .enroll-float {
+    position: static;
+    margin: 12px auto 0;
+    display: inline-flex;
   }
 }
