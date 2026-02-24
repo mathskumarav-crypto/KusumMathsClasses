@@ -1,80 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kusum Maths Classes</title>
-  <link rel="icon" href="logo.png" type="image/png">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701066141"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17701066141');
-  </script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kusum Maths Classes</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+
+/* HERO */
+.hero{
+text-align:center;
+padding:20px 20px;
+}
+
+.hero h2{
+font-size:34px;
+color:#3f51b5;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+color:#555;
+}
+
+/* CARD */
+.main{
+display:flex;
+justify-content:center;
+padding:40px 20px;
+}
+
+.card{
+background:white;
+width:100%;
+max-width:900px;
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,0.1);
+display:flex;
+flex-wrap:wrap;
+overflow:hidden;
+}
+
+.left{
+    flex:1;
+    padding:60px 40px;
+    background:linear-gradient(135deg,#5c6bc0,#3949ab);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left h3{
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:25px;
+    line-height:1.4;
+}
+
+/* Pricing layout */
+.pricing{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.original-price{
+    font-size:26px;
+    text-decoration:line-through;
+    opacity:0.8;
+}
+
+.badge{
+    background:linear-gradient(45deg,#ff9800,#ff5722);
+    color:white;
+    padding:8px 16px;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:1px;
+    animation:pulseGlow 1.5s infinite;
+}
+
+/* Smooth glowing animation */
+@keyframes pulseGlow{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 0 rgba(255,87,34,0.6);
+    }
+    50%{
+        transform:scale(1.1);
+        box-shadow:0 0 20px rgba(255,87,34,0.8);
+    }
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 0 rgba(255,87,34,0.6);
+    }
+}
+
+
+/* Offer text */
+.offer-text{
+    font-size:16px;
+    font-weight:600;
+    line-height:1.6;
+    opacity:0.95;
+}
+
+
+/* RIGHT */
+.right{
+flex:1;
+padding:50px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* ===== TIMER WRAPPER ===== */
+.timer-wrapper{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.watch-emoji{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.timer-text{
+    font-size:20px;
+    font-weight:900;
+    color:#d32f2f;   /* RED TIMER */
+}
+
+/* ===== BUTTON COMMON STYLE ===== */
+.right button{
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    font-weight:800;
+    font-size:16px;
+    transition:0.3s;
+    margin-bottom:18px;   /* GAP BETWEEN BUTTONS */
+}
+
+/* ===== GOOGLE MEET (Lighter Navy Gradient) ===== */
+.meet{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+}
+
+.meet:hover{
+    background:linear-gradient(135deg,#2a5298,#3b6cb7);
+    transform:scale(1.05);
+}
+
+/* ===== YOUTUBE BUTTON (True YouTube Gradient) ===== */
+.youtube{
+    background:linear-gradient(45deg,#ff0000,#e60000,#cc0000);
+    color:white;
+}
+
+.youtube:hover{
+    transform:scale(1.05);
+}
+
+
+
+/* LIVE Glow */
+@keyframes glow{
+0%{box-shadow:0 0 5px #00c853;}
+50%{box-shadow:0 0 25px #00c853;}
+100%{box-shadow:0 0 5px #00c853;}
+}
+.live{
+animation:glow 1.2s infinite;
+}
+
+/* SOCIAL BAR */
+.social-bar{
+position:fixed;
+top:45%;
+right:0;
+transform:translateY(-50%);
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.social-bar a{
+display:flex;
+align-items:center;
+gap:12px;
+padding:12px 15px;
+width:180px;
+border-radius:30px 0 0 30px;
+color:white;
+text-decoration:none;
+transform:translateX(125px);
+transition:transform 0.35s ease;
+}
+
+.social-bar a:hover{
+transform:translateX(0);
+}
+
+/* Brand gradients */
+.youtube-bg{ background:linear-gradient(45deg,#ff0000,#cc0000); }
+.instagram-bg{ background:linear-gradient(45deg,#feda75,#d62976,#962fbf); }
+.facebook-bg{ background:linear-gradient(45deg,#1877f2,#0d47a1); }
+.telegram-bg{ background:linear-gradient(45deg,#0088cc,#005f99); }
+.whatsapp-bg{ background:linear-gradient(45deg,#25d366,#128c7e); }
+.x-bg{background:linear-gradient(45deg,#000000,#434343);}
+
+/* FOOTER CREDIT BAR */
+footer{
+    background:#3f51b5;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    font-weight:700;
+    font-size:14px;
+    position:relative;
+    z-index:1;
+}
+
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.card{
+flex-direction:column;
+}
+.left,.right{
+padding:35px;
+}
+.hero h2{
+font-size:26px;
+}
+}
+
+
+/* ===== POPUP OVERLAY ===== */
+#classPopup{
+    position: fixed;          /* Stay fixed on screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: none;            /* Hidden by default */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    
+    background: rgba(0,0,0,0.6);  /* Dark transparent background */
+    z-index: 9999;            /* Above everything including credit bar */
+}
+
+/* ===== POPUP BOX ===== */
+.popup-content{
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    animation: popupFade 0.3s ease-in-out;
+}
+
+/* ===== CLOSE BUTTON ===== */
+.popup-content button{
+    margin-top: 20px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #3f51b5;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes popupFade{
+    from{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Default countdown style */
+#countdown{
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Active countdown style (Red + Bigger) */
+.countdown-active{
+    color: #ff0000;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* Popup Countdown Styling */
+.popup-countdown{
+    display: block;
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #ff0000;
+    letter-spacing: 1px;
+    animation: pulseRed 1s infinite;
+}
+
+/* Smooth Pulse Animation */
+@keyframes pulseRed{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+
+
+
+</style>
 </head>
+
 <body>
 
-  <header class="top-bar">
-  <h1>Kusum Maths Classes</h1>
-  <div class="slogan">
-    <span class="slogan-text">Basic Methods</span>
-    <span class="dot">|</span>
-    <span class="slogan-text">Easy Solutions</span>
-  </div>
-</header>
+    <div class="page-content">
 
-  <nav class="menu-bar" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="study-material.html">Study Material</a>
-    <a href="contents.html">UPSC CSAT</a>
-    <a href="enroll.html">Enroll</a>
-    <a href="#courses">Courses</a>
-    <a href="#results">Results</a>
-    <a href="#contact">Contact</a>
-  </nav>
+        <div class="top-header">
+                    <h1>Kusum Maths Classes</h1>
+                    <p>Dedicated to Excellence in UPSC CSAT 2026 Preparation</p>
+        </div>
 
-  <section id="daily-class" class="live-classes" aria-label="Daily live class">
-    <h2>Join Our Daily Classes at 9 PM</h2>
-    <p class="live-note">Live class link and YouTube stream are below.</p>
-    <div class="live-links">
-      <a class="live-btn" href="https://meet.google.com/opp-rejw-ztn" target="_blank" rel="noopener">Join Google Meet Class</a>
-      <a class="live-btn secondary" href="https://www.youtube.com/channel/UCuydLWKACcaijMUfPlFmjJw" target="_blank" rel="noopener">Watch YouTube Live</a>
+        <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="exam.html">Exam Preparation</a>
+                <a href="study-material.html">Free Study Material</a>
+                <a href="contact.html">Contact Us</a>
+        </nav>
+
+
+        <div class="hero">
+                <h2>Crack UPSC CSAT 2026 With Confidence 🚀</h2>
+                <p>Daily Live Mathematics Classes | Concepts + Practice + PYQs</p>
+        </div>
+
+        <div class="main">
+                <div class="card">
+
+                    <div class="left">
+                        <h3 style="text-align: center;">Complete Mathematics Program for</h3>
+                        <h3 style="text-align: center;">UPSC CSAT 2026</h3>
+                    
+                        <div class="pricing" style="display: flex; justify-content: center; gap: 15px;">
+                            <span class="original-price">₹2,999</span>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfexdrW5B09R-5MsNwqMjE9wLwKVAShmIF0yYvpVVtuz0BFqQ/viewform?usp=publish-editor" 
+                            target="_blank" 
+                            class="badge free-btn">
+                            FREE
+                            </a>
+                        </div>
+
+
+                        <p class="offer-text">
+                            Limited Period Offer – Enroll Today at No Cost and Start Your 
+                            Structured CSAT Preparation.
+                        </p>
+                    </div>
+
+                <div class="right">
+
+            
+                <div class="timer-wrapper">
+                    <div class="watch-emoji">⏰ </div>
+                    <div id="countdown" class="timer-text">
+                        Next Class In: --:--:--
+                    </div>
+                </div>
+
+                <button id="meetBtn" class="meet"  >
+                    Join Google Meet Class
+                </button>
+
+                <button class="youtube" onclick="window.open('https://youtube.com/@mathskusumclasses','_blank')">
+                    Visit YouTube Channel
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SOCIAL BAR -->
+        <div class="social-bar">
+
+            <a href="https://youtube.com/@mathskusumclasses " target="_blank" class="youtube-bg">
+                <i class="fab fa-youtube"></i><span>YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com/kusumclasses1/" target="_blank" class="instagram-bg">
+                <i class="fab fa-instagram"></i><span>Instagram</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61587164842333" target="_blank" class="facebook-bg">
+                <i class="fab fa-facebook-f"></i><span>Facebook</span>
+            </a>
+
+            <a href="https://web.telegram.org/k/#@kusumclasses" target="_blank" class="telegram-bg">
+                <i class="fab fa-telegram"></i><span>Telegram</span>
+            </a>
+
+            <a href="https://wa.me/917011904551" target="_blank" class="whatsapp-bg">
+                <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+            </a>
+
+            <!-- New X Button -->
+            <a href="https://x.com/kusumclasses" target="_blank" class="x-bg">
+                <i class="fa-brands fa-x-twitter"></i><span>X</span>
+            </a>
+
+        </div>
+
+        <!-- Bottom CTA Buttons -->
+        <div class="bottom-cta">
+
+            <a href="tel:+917011904551" class="cta call-btn">
+                <i class="fa-solid fa-phone"></i>
+                +91-7011904551
+            </a>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfexdrW5B09R-5MsNwqMjE9wLwKVAShmIF0yYvpVVtuz0BFqQ/viewform?usp=publish-editor" class="cta enroll-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Enroll Now
+            </a>
+
+            </div>
+        </div>
+
+        <div id="classPopup">
+            <div class="popup-content">
+                <p id="popupMessage"></p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+       
     </div>
-  </section>
 
-  <section class="live-socials-block" aria-label="Social media links">
-    <div class="live-socials">
-      <a class="social-btn whatsapp" href="https://wa.me/917011904551" target="_blank" rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </a>
-      <a class="social-btn facebook" href="https://facebook.com/" target="_blank" rel="noopener">
-        <i class="fa-brands fa-facebook-f"></i> Facebook
-      </a>
-      <a class="social-btn instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">
-        <i class="fa-brands fa-instagram"></i> Instagram
-      </a>
-      <a class="social-btn twitter" href="https://x.com/kusumclasses" target="_blank" rel="noopener">
-        <i class="fa-brands fa-x-twitter"></i> Twitter
-      </a>
-      <a class="social-btn telegram" href="https://t.me/kusum_classes" target="_blank" rel="noopener">
-        <i class="fa-brands fa-telegram"></i> Telegram
-      </a>
-      <a class="social-btn youtube" href="https://studio.youtube.com/channel/UCcCzbellymKf8XZ4d9WBfsQ" target="_blank" rel="noopener">
-        <i class="fa-brands fa-youtube"></i> YouTube
-      </a>
-    </div>
-  </section>
+    <footer>
+            © 2026 Kusum Maths Classes. All Rights Reserved. Designed for UPSC CSAT 2026 Preparation.
+        </footer>
 
-  <a class="contact-float" href="tel:+917011904551" aria-label="Contact us on +91-7011904551">Contact Us: +91-7011904551</a>
-  <a class="enroll-float" href="enroll.html" aria-label="Enroll now for free">Enroll Now for Free</a>
+        <script>
 
+            const CLASS_HOUR = 21;       // 9 PM IST
+            const CLASS_END_HOUR = 22;   // 10 PM IST
+            const VALID_DAYS = [1,2,3,4,5,6];
+
+            const meetBtn = document.getElementById("meetBtn");
+            const countdown = document.getElementById("countdown");
+            const popup = document.getElementById("classPopup");
+            const popupMessage = document.getElementById("popupMessage");
+
+            let isLive = false;
+
+            function getISTTime(){
+                const now = new Date();
+                return new Date(now.toLocaleString("en-US",{timeZone:"Asia/Kolkata"}));
+            }
+
+            function updateTime(){
+
+                const ist = getISTTime();
+                const day = ist.getDay();
+                const hours = ist.getHours();
+
+                // ===== CHECK IF LIVE =====
+                if(VALID_DAYS.includes(day) && hours >= CLASS_HOUR && hours < CLASS_END_HOUR){
+                isLive = true;
+                countdown.style.display = "none";
+                meetBtn.classList.add("live");
+                } else {
+                isLive = false;
+                countdown.style.display = "block";
+                meetBtn.classList.remove("live");
+                countdown.classList.add("countdown-active");  // 🔴 Add red active style
+                }
+
+                // ===== CALCULATE NEXT CLASS =====
+                let nextClass = new Date(ist);
+                nextClass.setHours(CLASS_HOUR,0,0,0);
+
+                if(hours >= CLASS_END_HOUR){
+                    nextClass.setDate(nextClass.getDate() + 1);
+                }
+
+                while(!VALID_DAYS.includes(nextClass.getDay())){
+                    nextClass.setDate(nextClass.getDate() + 1);
+                }
+
+                const diff = nextClass - ist;
+
+                const h = Math.floor(diff/(1000*60*60));
+                const m = Math.floor((diff%(1000*60*60))/(1000*60));
+                const s = Math.floor((diff%(1000*60))/1000);
+
+                countdown.innerHTML = `Next Class In: ${h}h ${m}m ${s}s`;
+            }
+
+            setInterval(updateTime,1000);
+            updateTime();
+
+
+            // ===== BUTTON CLICK CONTROL =====
+            meetBtn.addEventListener("click", function(e){
+
+                // Always stop default behavior
+                e.preventDefault();
+
+                if(isLive){
+                    // Only open meet during live time
+                    window.open("https://meet.google.com/opp-rejw-ztn","_blank");
+
+                } else {
+                    // Show popup instead
+                    popupMessage.innerHTML =
+                        "🕘 Please wait.<br><br>" +
+                        "The live class starts at <strong>9:00 PM IST</strong>.<br><br>" +
+                        "<span class='popup-countdown'>" + countdown.innerText + "</span>";
+
+                    popup.style.display = "flex";
+                }
+            });
+
+            function closePopup(){
+                popup.style.display = "none";
+            }
+
+        </script>
 </body>
 </html>
-
-

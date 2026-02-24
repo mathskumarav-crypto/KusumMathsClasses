@@ -1,219 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UPSC Year | Kusum Maths Classes</title>
-  <link rel="icon" href="logo.png" type="image/png">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701066141"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17701066141');
-  </script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4735471815045410" crossorigin="anonymous"></script>
+<HTML lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UPSC CSAT</title>
 
-</head>
-<body>
+        <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+        <link rel="apple-touch-icon" href="logo.png">
 
-  <header class="top-bar">
-    <h1>Kusum Maths Classes</h1>
-    <div class="slogan">
-      <span class="slogan-text">Basic Methods</span>
-      <span class="dot">|</span>
-      <span class="slogan-text">Easy Solutions</span>
-    </div>
-  </header>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <nav class="menu-bar" aria-label="Primary">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="study-material.html">Study Material</a>
-<a href="enroll.html">Enroll</a>
-    <a href="index.html#courses">Courses</a>
-    <a href="index.html#results">Results</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+        <link rel="stylesheet" href="style.css">
 
-  <section class="materials-page" aria-label="UPSC year question bank">
-    <div class="year-header-bar">
-      <h2 id="yearTitle">UPSC PYQs</h2>
-      <a class="year-back" href="upsc.html">Back to Years</a>
-    </div>
+        <style>
 
-    <div class="year-layout" aria-label="UPSC MCQ viewer">
-      <aside class="question-column" aria-label="Question numbers">
-        <div class="question-list" id="questionList"></div>
-      </aside>
 
-      <main class="question-view" aria-live="polite">
-        <div class="question-card">
-          <div class="question-meta">
-            <span id="activeYear">Year</span>
-            <span id="activeQuestion">Question</span>
-          </div>
-          <h3 id="questionText">Select a question to start.</h3>
-          <div class="options" id="options"></div>
-        </div>
-
-        <div class="explain-bar" id="explainBar" hidden>
-          <div class="explain-text" id="explainText">Explanation will appear here.</div>
-          <a class="answer-link" id="answerLink" href="#" target="_blank" rel="noopener">Watch Solution on YouTube</a>
-        </div>
-      </main>
-    </div>
-  </section>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const yearParam = params.get('year');
-    const yearValue = yearParam ? Number(yearParam) : 2024;
-    const questionsPerYear = 80;
-    const selections = new Map();
-    const questionBank = new Map();
-
-    const questionList = document.getElementById('questionList');
-    const activeYear = document.getElementById('activeYear');
-    const activeQuestion = document.getElementById('activeQuestion');
-    const questionText = document.getElementById('questionText');
-    const optionsWrap = document.getElementById('options');
-    const explainText = document.getElementById('explainText');
-    const answerLink = document.getElementById('answerLink');
-    const explainBar = document.getElementById('explainBar');
-    const yearTitle = document.getElementById('yearTitle');
-    const questionCard = document.querySelector('.question-card');
-
-    let currentQuestion = 1;
-
-    function baseQuestion(number) {
-      return {
-        question: "",
-        options: ["Option A", "Option B", "Option C", "Option D"],
-        correct: 0,
-        explanation: "Answer explanation will appear here.",
-        youtube: "https://youtube.com/"
-      };
-    }
-
-    function getQuestion(number) {
-      const key = `${yearValue}-${number}`;
-      return questionBank.get(key) || baseQuestion(number);
-    }
-
-    function renderQuestions() {
-      questionList.innerHTML = '';
-      for (let i = 1; i <= questionsPerYear; i += 1) {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'question-num';
-        btn.textContent = i;
-        if (i === currentQuestion) btn.classList.add('active');
-        btn.addEventListener('click', () => {
-          currentQuestion = i;
-          renderQuestions();
-          loadQuestion();
-          questionCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-        questionList.appendChild(btn);
-      }
-    }
-
-    function optionLetter(index) {
-      return String.fromCharCode(65 + index);
-    }
-
-    function loadQuestion() {
-    const data = getQuestion(currentQuestion);
-
-    // Update header info
-    activeYear.textContent = `Year ${yearValue}`;
-    activeQuestion.textContent = `Q${currentQuestion} of ${questionsPerYear}`;
-
-    // ────────────────────────────────────────────────
-    //    QUESTION TEXT – Split into readable rows
-    // ────────────────────────────────────────────────
-    let questionDisplay = data.question || "Select a question to start.";
-
-    
-    // Use innerHTML so <br> tags are rendered as line breaks
-    questionText.innerHTML = questionDisplay;
-
-    // ────────────────────────────────────────────────
-    //    OPTIONS
-    // ────────────────────────────────────────────────
-    optionsWrap.innerHTML = '';
-
-    data.options.forEach((opt, idx) => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'option-btn';
-        btn.textContent = `${optionLetter(idx)}. ${opt}`;
-        btn.addEventListener('click', () => {
-            selections.set(`${yearValue}-${currentQuestion}`, idx);
-            updateSelectionState(data, idx);
-            updateExplainBar(data, idx);
-        });
-        optionsWrap.appendChild(btn);
-    });
-
-    // Restore previous selection (if any)
-    const stored = selections.get(`${yearValue}-${currentQuestion}`);
-    updateSelectionState(data, stored);
-    updateExplainBar(data, stored);
+        footer{
+            background:#3f51b5;
+            color:white;
+            text-align:center;
+            padding:25px 15px;
+            font-weight:700;
+            font-size:14px;
+            position:relative;
+            z-index:1;
+        }
+        
+        .year-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+    max-width:1100px;
+    margin:0 auto;
 }
 
-    function updateSelectionState(data, selectedIndex) {
-      const buttons = optionsWrap.querySelectorAll('.option-btn');
-      buttons.forEach((btn, idx) => {
-        btn.classList.remove('correct', 'wrong', 'selected');
-        if (selectedIndex === undefined) return;
-        if (idx === selectedIndex) {
-          btn.classList.add('selected');
-          if (idx === data.correct) {
-            btn.classList.add('correct');
-          } else {
-            btn.classList.add('wrong');
-          }
-        }
-      });
-    }
+.year-btn{
+    padding:16px 40px;              /* Wider & taller */
+    background:#ffffff;
+    color:#3f51b5;
+    border:none;
+    border-radius:50px;             /* Fully smooth rounded edge */
+    font-size:16px;
+    font-weight:700;
+    text-decoration:none;
+    letter-spacing:0.5px;
+    transition:all 0.3s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
 
-    function updateExplainBar(data, selectedIndex) {
-      const correctText = `${optionLetter(data.correct)}. ${data.options[data.correct]}`;
-      if (selectedIndex === undefined) {
-        explainBar.hidden = true;
-        explainText.textContent = '';
-      } else {
-        explainBar.hidden = false;
-        explainText.textContent = `Correct Answer: ${correctText} - ${String(data.explanation || "").replace(/\uFFFD/g, "").replace(/—|�/g, "-")}`;
-      }
-      answerLink.href = data.youtube;
-    }
+/* Hover */
+.year-btn:hover{
+    background:#3f51b5;
+    color:#ffffff;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(63,81,181,0.25);
+}
 
-    function loadQuestionBank() {
-      return fetch('upsc-questions.json')
-        .then((res) => res.json())
-        .then((data) => {
-          if (!data || !Array.isArray(data.questions)) return;
-          data.questions.forEach((item) => {
-            if (!item.year || !item.number) return;
-            const key = `${item.year}-${item.number}`;
-            questionBank.set(key, item);
-          });
-        })
-        .catch(() => {});
-    }
+/* Click */
+.year-btn:active{
+    transform:translateY(0);
+}
 
-    yearTitle.textContent = `UPSC PYQs ${yearValue}`;
-    loadQuestionBank().finally(() => {
-      renderQuestions();
-      loadQuestion();
-    });
-  </script>  <!-- Slim bottom credit bar -->
-</body></html>
+        </style>
+    </head>
+
+    <body>
+
+        <div class="page-content">
+        
+            <div class="top-header">
+                <h1> Kusum Maths Classes</h1>
+                <p> Dedicated to Excellence in UPSC CSAT 2026 Preparation</p>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about-new.html">About Us</a>
+                <a href="exam.html">Exam Preparation</a>
+                <a href="study-material.html">Free Study Material</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            
+            <div class="exam-section">
+
+                <h2 class="exam-heading">Previous Year Questions (PYQs)</h2>
+
+                <div class="year-buttons">
+                    <a href="upsc-csat-2025.html" class="year-btn">2025</a>
+                    <a href="#" class="year-btn">2024</a>
+                    <a href="#" class="year-btn">2023</a>
+                    <a href="#" class="year-btn">2022</a>
+                    <a href="#" class="year-btn">2021</a>
+                    <a href="#" class="year-btn">2020</a>
+                    <a href="#" class="year-btn">2019</a>
+                    <a href="#" class="year-btn">2018</a>
+                    <a href="#" class="year-btn">2017</a>
+                    <a href="#" class="year-btn">2016</a>
+                    <a href="#" class="year-btn">2015</a>
+                    <a href="#" class="year-btn">2014</a>
+                    <a href="#" class="year-btn">2013</a>
+                    <a href="#" class="year-btn">2012</a>
+                    <a href="#" class="year-btn">2011</a>
+                    <a href="#" class="year-btn">2010</a>
+                </div>
+
+            </div>
 
 
+        </div>
+
+        <div class="social-bar">
+
+            <a href="https://youtube.com/@mathskusumclasses " target="_blank" class="youtube-bg">
+            <i class="fab fa-youtube"></i><span>YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com/kusumclasses1/" target="_blank" class="instagram-bg">
+            <i class="fab fa-instagram"></i><span>Instagram</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61587164842333" target="_blank" class="facebook-bg">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+            </a>
+
+            <a href="https://web.telegram.org/k/#@kusumclasses" target="_blank" class="telegram-bg">
+            <i class="fab fa-telegram"></i><span>Telegram</span>
+            </a>
+
+            <a href="https://wa.me/917011904551" target="_blank" class="whatsapp-bg">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+            </a>
+
+            <!-- New X Button -->
+            <a href="https://x.com/kusumclasses" target="_blank" class="x-bg">
+            <i class="fa-brands fa-x-twitter"></i><span>X</span>
+            </a>
+
+        </div>
+
+        <div class="bottom-cta">
+
+            <a href="tel:+917011904551" class="cta call-btn">
+                <i class="fa-solid fa-phone"></i>
+                +91-7011904551
+            </a>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfexdrW5B09R-5MsNwqMjE9wLwKVAShmIF0yYvpVVtuz0BFqQ/viewform?usp=publish-editor" class="cta enroll-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Enroll Now
+            </a>
+
+        </div>
+
+        <footer>
+        © 2026 Kusum Maths Classes. All Rights Reserved. Designed for UPSC CSAT 2026 Preparation.
+        </footer>
+    </body>
+</HTML>

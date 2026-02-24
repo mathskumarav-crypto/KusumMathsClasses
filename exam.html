@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exam-Prepartion</title>
+
+        <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+        <link rel="apple-touch-icon" href="logo.png">
+
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+
+        .exam-accordion-section{
+        padding:30px 20px 50px 20px;
+        text-align:center;
+        }
+
+        .exam-main-heading{
+            font-size:28px;
+            font-weight:900;
+            margin-bottom:30px;
+            color:#3f51b5;
+        }
+
+        .accordion{
+            max-width:800px;
+            margin:auto;
+        }
+
+        .accordion-item{
+            margin-bottom:15px;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .accordion-btn{
+            width:100%;
+            background:#3f51b5;
+            color:white;
+            padding:15px;
+            font-size:18px;
+            font-weight:800;
+            border:none;
+            cursor:pointer;
+            text-align:left;
+            transition:0.3s;
+        }
+
+        .accordion-btn:hover{
+            background:#303f9f;
+        }
+
+        .accordion-content{
+            max-height:0;
+            overflow:hidden;
+            background:#f5f6ff;
+            transition:max-height 0.4s ease;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .accordion-content a{
+            padding:12px 20px;
+            text-decoration:none;
+            color:#333;
+            font-weight:600;
+            border-top:1px solid #ddd;
+        }
+
+        .accordion-content a:hover{
+            background:#e8eaff;
+        }
+
+        footer{
+            background:#3f51b5;
+            color:white;
+            text-align:center;
+            padding:25px 15px;
+            font-weight:700;
+            font-size:14px;
+            position:relative;
+            z-index:1;
+        }
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="page-content">
+        
+            <div class="top-header">
+                <h1> Kusum Maths Classes</h1>
+                <p> Dedicated to Excellence in UPSC CSAT 2026 Preparation</p>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="exam.html">Exam Preparation</a>
+                <a href="study-material.html">Free Study Material</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+
+            <div class="exam-accordion-section">
+
+                <h2 class="exam-main-heading">Explore Examinations</h2>
+
+                <div class="accordion">
+
+                  
+                    <!-- UPSC -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn">UPSC – Union Public Service Commission</button>
+                        <div class="accordion-content">
+
+                            <a href="upsc-year.html">
+                                CSAT – Civil Services Examination (CSE)  
+                                <br><small>(Preliminary Aptitude Test – Paper II)</small>
+                            </a>
+
+                            <a href="#">
+                                IFoS Aptitude – Indian Forest Service Examination  
+                                <br><small>(Preliminary Stage through CSE)</small>
+                            </a>
+
+                            
+
+                        </div>
+                    </div>
+
+                    <!-- SSC -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn">SSC</button>
+                        <div class="accordion-content">
+                            <a href="#">SSC CGL</a>
+                            <a href="#">SSC CHSL</a>
+                            <a href="#">SSC MTS</a>
+                            <a href="#">SSC GD</a>
+                        </div>
+                    </div>
+
+                    <!-- State PSC -->
+                    <div class="accordion-item">
+                        <button class="accordion-btn">State PSC</button>
+                        <div class="accordion-content">
+                            <a href="#">UPPSC</a>
+                            <a href="#">BPSC</a>
+                            <a href="#">MPPSC</a>
+                            <a href="#">RPSC</a>
+                            <a href="#">HPSC</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="social-bar">
+
+            <a href="https://youtube.com/@mathskusumclasses " target="_blank" class="youtube-bg">
+            <i class="fab fa-youtube"></i><span>YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com/kusumclasses1/" target="_blank" class="instagram-bg">
+            <i class="fab fa-instagram"></i><span>Instagram</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61587164842333" target="_blank" class="facebook-bg">
+            <i class="fab fa-facebook-f"></i><span>Facebook</span>
+            </a>
+
+            <a href="https://web.telegram.org/k/#@kusumclasses" target="_blank" class="telegram-bg">
+            <i class="fab fa-telegram"></i><span>Telegram</span>
+            </a>
+
+            <a href="https://wa.me/917011904551" target="_blank" class="whatsapp-bg">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+            </a>
+
+            <!-- New X Button -->
+            <a href="https://x.com/kusumclasses" target="_blank" class="x-bg">
+            <i class="fa-brands fa-x-twitter"></i><span>X</span>
+            </a>
+
+        </div>
+
+        <div class="bottom-cta">
+
+            <a href="tel:+917011904551" class="cta call-btn">
+                <i class="fa-solid fa-phone"></i>
+                +91-7011904551
+            </a>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfexdrW5B09R-5MsNwqMjE9wLwKVAShmIF0yYvpVVtuz0BFqQ/viewform?usp=publish-editor" class="cta enroll-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Enroll Now
+            </a>
+
+        </div>
+
+        <footer>
+        © 2026 Kusum Maths Classes. All Rights Reserved. Designed for UPSC CSAT 2026 Preparation.
+        </footer>
+
+
+        <script>
+            const accordionBtns = document.querySelectorAll(".accordion-btn");
+
+            accordionBtns.forEach(btn => {
+                btn.addEventListener("click", function() {
+                    const content = this.nextElementSibling;
+
+                    if(content.style.maxHeight){
+                        content.style.maxHeight = null;
+                    } else {
+                        document.querySelectorAll(".accordion-content").forEach(item => {
+                            item.style.maxHeight = null;
+                        });
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        </script>
+    </body>
+</HTML>
