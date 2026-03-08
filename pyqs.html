@@ -6,18 +6,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kusum Maths Classes | UPSC CSAT 2026</title>
+<title>PYQs | Kusum Maths Classes</title>
 
-<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
+<link rel="icon" href="logo.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -314,14 +311,12 @@ margin-left:0;
 }
 
 /* MAIN CONTAINER */
-/* MAIN HERO SECTION */
 
 .main-container{
 
-max-width:900px;
-
+max-width:1300px;
+width:92%;
 margin:40px auto;
-
 padding:50px 40px;
 
 background:white;
@@ -331,6 +326,220 @@ border-radius:22px;
 box-shadow:0 20px 60px rgba(0,0,0,0.08);
 
 text-align:center;
+
+}
+
+
+/* TITLE */
+
+.course-title{
+
+font-size:36px;
+
+font-weight:800;
+
+color:#1e293b;
+
+margin-bottom:15px;
+
+}
+
+
+/* TAGLINE */
+
+.course-tagline{
+
+font-size:18px;
+
+color:#64748b;
+
+margin-bottom:35px;
+
+max-width:700px;
+
+margin-left:auto;
+margin-right:auto;
+
+line-height:1.6;
+
+}
+
+
+/* GRID LAYOUT */
+
+.courses-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:28px;
+
+}
+
+
+/* COURSE CARD */
+
+.course-card{
+
+background:#f8fafc;
+
+padding:25px;
+
+border-radius:16px;
+
+text-align:left;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+transition:all 0.3s ease;
+
+}
+
+.course-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 16px 40px rgba(0,0,0,0.15);
+
+}
+
+
+/* ICON */
+
+.course-icon{
+
+width:55px;
+height:55px;
+
+border-radius:12px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:22px;
+
+color:white;
+
+background:linear-gradient(135deg,#6366f1,#8b5cf6);
+
+margin-bottom:15px;
+
+}
+
+
+/* COURSE TITLE */
+
+.course-card h3{
+
+font-size:18px;
+
+margin-bottom:10px;
+
+color:#1e293b;
+
+}
+
+
+/* COURSE TEXT */
+
+.course-card p{
+
+font-size:15px;
+
+color:#64748b;
+
+line-height:1.6;
+
+}
+
+
+/* PRICE */
+
+.course-price{
+
+margin:15px 0;
+
+}
+
+.old-price{
+
+text-decoration:line-through;
+
+color:#94a3b8;
+
+margin-right:10px;
+
+font-size:15px;
+
+}
+
+.new-price{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#16a34a;
+
+}
+
+
+/* BUTTON */
+
+.course-btn{
+
+display:inline-block;
+
+margin-top:5px;
+
+padding:10px 18px;
+
+background:#f97316;
+
+color:white;
+
+border-radius:22px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+.course-btn:hover{
+
+background:#ea580c;
+
+transform:translateY(-2px);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-container{
+
+padding:30px 20px;
+
+}
+
+.course-title{
+
+font-size:26px;
+
+}
+
+.course-tagline{
+
+font-size:16px;
+
+}
 
 }
 
@@ -1017,116 +1226,384 @@ font-size:13px;
 
 }
 
+/* MAIN LAYOUT */
+
+.main-layout{
+
+display:flex;
+
+gap:25px;
+
+max-width:1300px;
+
+width:95%;
+
+margin:40px auto;
+
+align-items:flex-start;
+
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+width:260px;
+
+background:white;
+
+padding:25px;
+
+border-radius:14px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+
+/* SIDEBAR TITLE */
+
+.sidebar h3{
+
+font-size:20px;
+
+margin-bottom:10px;
+
+color:#1e293b;
+
+}
+
+
+/* LABEL */
+
+.sidebar label{
+
+font-size:14px;
+
+font-weight:600;
+
+color:#475569;
+
+}
+
+
+/* SELECT + INPUT */
+
+.sidebar select,
+.sidebar input{
+
+width:100%;
+
+padding:10px;
+
+border-radius:8px;
+
+border:1px solid #e2e8f0;
+
+font-size:14px;
+
+outline:none;
+
+transition:0.2s;
+
+}
+
+.sidebar select:focus,
+.sidebar input:focus{
+
+border-color:#6366f1;
+
+box-shadow:0 0 0 2px rgba(99,102,241,0.15);
+
+}
+
+
+/* BUTTON */
+
+.sidebar button{
+
+margin-top:10px;
+
+padding:12px;
+
+background:linear-gradient(135deg,#6366f1,#8b5cf6);
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.sidebar button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 18px rgba(99,102,241,0.3);
+
+}
+
+
+/* QUESTION CARD */
+
+#main-card{
+
+flex:1;
+
+background:white;
+
+padding:35px;
+
+border-radius:16px;
+
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+
+min-height:300px;
+
+}
+
+
+/* STATUS */
+
+#status{
+
+font-size:18px;
+
+font-weight:600;
+
+color:#64748b;
+
+margin-bottom:20px;
+
+}
+
+
+/* QUESTION TEXT */
+
+#q-eng{
+
+font-size:18px;
+
+line-height:1.6;
+
+margin-bottom:20px;
+
+color:#1e293b;
+
+}
+
+
+/* OPTIONS */
+
+#options-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+
+.option{
+
+background:#f8fafc;
+
+padding:12px 14px;
+
+border-radius:8px;
+
+border:1px solid #e2e8f0;
+
+cursor:pointer;
+
+transition:0.2s;
+
+}
+
+.option:hover{
+
+background:#eef2ff;
+
+border-color:#6366f1;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-layout{
+
+flex-direction:column;
+
+}
+
+.sidebar{
+
+width:100%;
+
+}
+
+#main-card{
+
+padding:25px;
+
+}
+
+#q-eng{
+
+font-size:16px;
+
+}
+
+}
+
 </style>
 
+
 </head>
+
 
 <body>
 
 
 <div class="top-bar">
-
-<h1>KUSUM MATHS CLASSES</h1>
-
+<h1>Kusum Maths Classes</h1>
 </div>
-
 
 
 <div class="navbar">
 
-<div class="menu-toggle" id="menu-toggle">
-<i class="fas fa-bars"></i>
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fa fa-bars"></i>
 </div>
 
-<div class="nav-links" id="nav-links">
+<div class="nav-links" id="navLinks">
 
 <a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="courses.html">Courses</a>
-<a href="study-material.html">Free Study Material</a>
-<a href="pyqs.html">PYQs</a>
 
+<a href="about.html">About</a>
+
+<a href="courses.html">Courses</a>
+
+<a href="study-material.html">Free Study Material</a>
+
+<a href="pyqs.html">PYQs</a>
 
 <a href="#" id="login-open">Login</a>
 
+
+</div>
+
+</div>
+
+<div class="main-layout">
+
+
+<!-- LEFT SIDEBAR -->
+
+<div class="sidebar">
+
+<h3>UPSC CSAT</h3>
+
+<label>Year</label>
+
+<select id="year">
+<option>2025</option>
+<option>2024</option>
+<option>2023</option>
+<option>2022</option>
+<option>2021</option>
+<option>2020</option>
+<option>2019</option>
+<option>2018</option>
+<option>2017</option>
+<option>2016</option>
+<option>2015</option>
+<option>2014</option>
+</select>
+
+<label>Set</label>
+
+<select id="set" disabled>
+<option selected>A</option>
+<option>B</option>
+<option>C</option>
+<option>D</option>
+</select>
+
+<label>Question</label>
+
+<input type="number" id="q-input" min="1" max="80" value="1">
+
+<button onclick="fetchQuestion()">Load Question</button>
+
+</div>
+
+
+
+<!-- QUESTION AREA -->
+
+<div id="main-card">
+
+<div id="status">Select question</div>
+
+<div id="quiz-content" style="display:none">
+
+<div id="q-eng"></div>
+
+<div id="options-list"></div>
+
 </div>
 
 </div>
 
 
-
-<div class="main-container">
-
-<h2 class="course-title">UPSC CSAT 2026 Maths Mastery Program</h2>
-
-<p class="course-tagline">
-Master Quantitative Aptitude for UPSC CSAT with structured learning,
-concept clarity and PYQ based strategy.
-</p>
-
-<div class="course-features">
-
-<div class="feature">
-<i class="fa-solid fa-book-open"></i>
-<span>Complete CSAT Maths Syllabus</span>
 </div>
 
-<div class="feature">
-<i class="fa-solid fa-chart-line"></i>
-<span>PYQs from 1995–2024</span>
-</div>
 
-<div class="feature">
-<i class="fa-solid fa-pen"></i>
-<span>Daily Practice Questions</span>
-</div>
+<div class="social-media">
 
-<div class="feature">
-<i class="fa-solid fa-clock"></i>
-<span>Daily Classes at 9 PM</span>
-</div>
-
-<div class="feature">
-<i class="fa-solid fa-graduation-cap"></i>
-<span>Concept + Shortcut Methods</span>
-</div>
-
-<div class="feature">
-<i class="fa-solid fa-brain"></i>
-<span>CSAT Strategy & Exam Approach</span>
-</div>
-
-</div>
-
-<div class="price-box">
-
-<span class="real-price">₹4,999</span>
-
-<span class="offer-price">₹999</span>
-
-<span class="offer-badge">Limited Offer</span>
-
-</div>
-
-<div class="batch-info">
-
-<i class="fa-solid fa-calendar"></i>
-<span>New Batch Starting Soon</span>
-
-</div>
-
-<div class="course-buttons">
-
-<a href="https://youtube.com/channel/UCuydLWKACcaijMUfPlFmjJw/" 
-class="btn youtube-btn" 
-target="_blank">
-
-<i class="fa-brands fa-youtube"></i>
-Watch Free CSAT Classes
-
+<a href="https://youtube.com/@mathskusumclasses" class="youtube" target="_blank">
+<i class="fab fa-youtube"></i>
 </a>
 
-</div>
+<a href="https://www.facebook.com/profile.php?id=61587164842333" class="facebook" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/kusumclasses1/" class="instagram" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://web.telegram.org/k/#@kusumclasses" class="telegram" target="_blank">
+<i class="fab fa-telegram"></i>
+</a>
+
+<a href="https://wa.me/917011904551" class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="https://x.com/kusumclasses" class="twitter" target="_blank">
+<i class="fa-brands fa-x-twitter"></i>
+</a>
 
 </div>
 
@@ -1148,53 +1625,7 @@ Enroll Now
 </a>
 
 
-<div class="social-media">
 
-<a href="https://youtube.com/channel/UCuydLWKACcaijMUfPlFmjJw" target="_blank" class="youtube">
-<i class="fab fa-youtube"></i>
-</a>
-
-<a href="https://www.facebook.com/profile.php?id=61587164842333" target="_blank" class="facebook">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-<a href="https://www.instagram.com/kusumclasses1/" target="_blank" class="instagram">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://t.me/kusumclasses" target="_blank" class="telegram">
-<i class="fab fa-telegram-plane"></i>
-</a>
-
-<a href="https://wa.me/917011904551" target="_blank" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="https://x.com/kusumclasses" target="_blank" class="twitter">
-<i class="fab fa-x-twitter"></i>
-</a>
-
-</div>
-
-
-
-<div class="login-popup" id="login-popup">
-
-<div class="login-box">
-
-<span class="close-btn" id="login-close">&times;</span>
-
-<h3>Student Login</h3>
-
-<input type="email" placeholder="Email">
-
-<input type="password" placeholder="Password">
-
-<button class="login-submit">Login</button>
-
-</div>
-
-</div>
 
 
 
@@ -1206,39 +1637,102 @@ Enroll Now
 
 
 
-<script>
+<script type="module">
 
-const toggle=document.getElementById("menu-toggle")
-const navLinks=document.getElementById("nav-links")
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-toggle.onclick=()=>{
+const firebaseConfig = {
 
-navLinks.classList.toggle("active")
+apiKey: "AIzaSyAAKziI4pQVpinyHtM0p42daXr3Lz1Un0A",
+authDomain: "kusum-maths-classes-905de.firebaseapp.com",
+projectId: "kusum-maths-classes-905de",
+storageBucket: "kusum-maths-classes-905de.firebasestorage.app",
+messagingSenderId: "93988675955",
+appId: "1:93988675955:web:293632fc7568cb08e6a506"
+
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+window.fetchQuestion = async function(){
+
+const year=document.getElementById("year").value;
+const qNo=document.getElementById("q-input").value;
+
+const status=document.getElementById("status");
+const list=document.getElementById("options-list");
+
+status.innerText="Loading...";
+list.innerHTML="";
+
+try{
+
+const docRef=doc(db,"upsc_csat_"+year,qNo.toString());
+
+const snap=await getDoc(docRef);
+
+if(!snap.exists()){
+status.innerText="Question not found";
+return;
+}
+
+const data=snap.data();
+
+document.getElementById("q-eng").innerHTML=data.question_eng;
+
+['a','b','c','d'].forEach(key=>{
+
+if(!data[key]) return;
+
+const opt=document.createElement("div");
+
+opt.className="option-row";
+
+opt.innerHTML=`
+<div class="opt-key">${key.toUpperCase()}</div>
+<div>${data[key]}</div>
+`;
+
+opt.onclick=()=>{
+
+if(key===data.correct_ans){
+
+opt.classList.add("correct");
+
+}else{
+
+opt.classList.add("wrong");
 
 }
 
+};
 
-const loginOpen=document.getElementById("login-open")
-const loginPopup=document.getElementById("login-popup")
-const loginClose=document.getElementById("login-close")
+list.appendChild(opt);
 
-loginOpen.onclick=()=>{
+});
 
-loginPopup.style.display="flex"
+status.innerText="";
+document.getElementById("quiz-content").style.display="block";
+
+setTimeout(()=>{
+
+renderMathInElement(document.body,{
+delimiters:[
+{left:"$",right:"$",display:false},
+{left:"$$",right:"$$",display:true}
+]
+});
+
+},100);
 
 }
 
-loginClose.onclick=()=>{
+catch(err){
 
-loginPopup.style.display="none"
-
-}
-
-window.onclick=(e)=>{
-
-if(e.target==loginPopup){
-
-loginPopup.style.display="none"
+status.innerText=err.message;
 
 }
 
