@@ -1475,6 +1475,31 @@ font-size:16px;
 
 }
 
+.option-row{
+display:grid;
+grid-template-columns:40px 1fr;
+gap:10px;
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+margin-bottom:8px;
+cursor:pointer;
+}
+
+.opt-key{
+font-weight:600;
+}
+
+.correct{
+background:#d1fae5;
+border-color:#10b981;
+}
+
+.wrong{
+background:#fee2e2;
+border-color:#ef4444;
+}
+
 </style>
 
 
@@ -1643,14 +1668,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
-
 apiKey: "AIzaSyAAKziI4pQVpinyHtM0p42daXr3Lz1Un0A",
 authDomain: "kusum-maths-classes-905de.firebaseapp.com",
 projectId: "kusum-maths-classes-905de",
 storageBucket: "kusum-maths-classes-905de.firebasestorage.app",
 messagingSenderId: "93988675955",
 appId: "1:93988675955:web:293632fc7568cb08e6a506"
-
 };
 
 const app = initializeApp(firebaseConfig);
@@ -1659,46 +1682,54 @@ const db = getFirestore(app);
 
 window.fetchQuestion = async function(){
 
-const year=document.getElementById("year").value;
-const qNo=document.getElementById("q-input").value;
+const year = document.getElementById("year").value;
+const qNo = document.getElementById("q-input").value;
 
-const status=document.getElementById("status");
-const list=document.getElementById("options-list");
+const status = document.getElementById("status");
+const list = document.getElementById("options-list");
 
-status.innerText="Loading...";
-list.innerHTML="";
+status.innerText = "Loading...";
+list.innerHTML = "";
 
 try{
 
-const docRef=doc(db,"upsc_csat_"+year,qNo.toString());
-
-const snap=await getDoc(docRef);
+const docRef = doc(db,"upsc_csat_"+year,qNo.toString());
+const snap = await getDoc(docRef);
 
 if(!snap.exists()){
-status.innerText="Question not found";
+status.innerText = "Question not found";
 return;
 }
 
-const data=snap.data();
+const data = snap.data();
 
-document.getElementById("q-eng").innerHTML=data.question_eng;
+document.getElementById("q-eng").innerHTML = data.question_eng;
 
-['a','b','c','d'].forEach(key=>{
+
+/* OPTION RENDERING */
+
+['a','b','c','d'].forEach(key => {
 
 if(!data[key]) return;
 
-const opt=document.createElement("div");
+const opt = document.createElement("div");
+opt.className = "option-row";
 
-opt.className="option-row";
-
-opt.innerHTML=`
-<div class="opt-key">${key.toUpperCase()}</div>
-<div>${data[key]}</div>
+opt.innerHTML = `
+<div class="opt-key">${key})</div>
+<div class="opt-text">${data[key]}</div>
 `;
 
-opt.onclick=()=>{
 
-if(key===data.correct_ans){
+/* OPTION CLICK */
+
+opt.onclick = () => {
+
+document.querySelectorAll(".option-row").forEach(el=>{
+el.classList.remove("correct","wrong");
+});
+
+if(key === data.correct_ans){
 
 opt.classList.add("correct");
 
@@ -1714,8 +1745,11 @@ list.appendChild(opt);
 
 });
 
-status.innerText="";
-document.getElementById("quiz-content").style.display="block";
+status.innerText = "";
+document.getElementById("quiz-content").style.display = "block";
+
+
+/* RENDER LATEX */
 
 setTimeout(()=>{
 
@@ -1732,7 +1766,7 @@ delimiters:[
 
 catch(err){
 
-status.innerText=err.message;
+status.innerText = err.message;
 
 }
 
