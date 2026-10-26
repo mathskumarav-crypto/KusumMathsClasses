@@ -38,7 +38,26 @@ header { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(12px); bor
 .questionBody.tag-h1 { font-size: 16px; font-weight: 500; line-height: 1.6; margin-bottom: 20px; color: var(--ink); }
 .statement-block { margin-top: 10px; font-weight: 500; }
 .options-list { list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 10px; }
-.option { background: #f8fafc; border: 1px solid var(--line); padding: 12px 16px; border-radius: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-light); cursor: pointer; transition: all 0.2s ease; }
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.option strong {
+  flex-shrink: 0;
+}
+.option span {
+  display: inline-block;
+}
 .option:hover { background: var(--blue-light); border-color: var(--blue); color: var(--ink); }
 .option.correct { background: #ecfdf5 !important; border-color: #10b981 !important; color: #065f46 !important; font-weight: 600; }
 .option.incorrect { background: #fef2f2 !important; border-color: #ef4444 !important; color: #991b1b !important; font-weight: 600; }
