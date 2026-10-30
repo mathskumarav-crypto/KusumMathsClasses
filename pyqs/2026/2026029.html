@@ -115,9 +115,11 @@
                 <!-- Question Statement -->
                 <h1 class="questionBody tag-h1">
                     <span>
-                        Three variables \(x\), \(y\) and \(z\) take values 2, 3, 4 or 5 such that their values are always distinct.
-                        If \(M\) and \(N\) denote the largest possible value and the smallest possible value, respectively,
-                        for the expression \(\{(x \times y) + z\}\); then \(M - N\) is
+                        Three variables \(x\), \(y\) and \(z\) take values
+                        \(2, 3, 4\) or \(5\) such that their values are always distinct.
+                        If \(M\) and \(N\) denote the largest possible value and the
+                        smallest possible value, respectively, for the expression
+                        \(\left\{(x \times y) + z\right\}\); then \(M - N\) is
                     </span>
                 </h1>
 
@@ -252,15 +254,22 @@
 
     document.addEventListener("DOMContentLoaded", function() {
 
-        // Render mathematical expressions.
+        // Render mathematical expressions using KaTeX.
         if (typeof renderMathInElement === "function") {
+
             renderMathInElement(document.body, {
+
                 delimiters: [
                     {left: "$$", right: "$$", display: true},
-                    {left: "$", right: "$", display: false}
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false},
+                    {left: "\\[", right: "\\]", display: true}
                 ],
+
                 throwOnError: false
+
             });
+
         }
 
 
