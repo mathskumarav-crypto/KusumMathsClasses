@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Question 25 | Kusum Maths Classes</title>
+
+    <link rel="icon" type="image/png" href="../../logo.png">
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- KaTeX -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js">
+    </script>
+
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);">
+    </script>
+</head>
+
+<body>
+
+    <!-- Top Information Strip -->
+    <div class="top-strip">
+        <div class="container">
+            <span>UPSC CSAT 2027</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-content">
+
+            <a href="../../index.html" class="logo">
+                Kusum Maths Classes
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="../../index.html">Home</a>
+                <a href="../../courses.html">Courses</a>
+                <a href="../../study-material.html">Study Material</a>
+                <a href="../../pyqs.html">PYQs</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="../../index.html">Home</a>
+            <span>/</span>
+            <a href="../../pyqs.html">PYQs</a>
+            <span>/</span>
+            <span>Question 25</span>
+        </div>
+
+        <!-- Question Card -->
+        <section class="question-card" data-correct="">
+
+            <!-- Question Header -->
+            <div class="question-header">
+
+                <div>
+                    <span class="question-label">Question 25</span>
+                    <h1>UPSC CSAT Practice Question</h1>
+                </div>
+
+                <button
+                    class="share-btn"
+                    onclick="shareQuestion()"
+                    aria-label="Share question">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+
+            </div>
+
+            <!-- Question Content -->
+            <div class="question-content">
+
+                <p class="question-text">
+                    The class average \(x\) in a test increases by 4 when the score of a student is rectified, whose corrected score is 100 instead of 0. Later, the score of another student was found to have been recorded as 81 in place of 56. If there are no other corrections and the final corrected average is \(y\), then \(y-x\) is
+                </p>
+
+                <!-- Answer Options -->
+                <div class="options-list">
+
+                    <div class="option" data-option="A">
+                        <span class="option-label">A</span>
+                        <span class="option-text">2</span>
+                    </div>
+
+                    <div class="option" data-option="B">
+                        <span class="option-label">B</span>
+                        <span class="option-text">3</span>
+                    </div>
+
+                    <div class="option" data-option="C">
+                        <span class="option-label">C</span>
+                        <span class="option-text">5</span>
+                    </div>
+
+                    <div class="option" data-option="D">
+                        <span class="option-label">D</span>
+                        <span class="option-text">6</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Practice Paper Section -->
+            <div class="practice-section">
+
+                <div class="practice-info">
+                    <h3>Practice Question</h3>
+                    <p>Test your understanding by attempting this question.</p>
+                </div>
+
+                <div class="practice-actions">
+
+                    <button class="btn btn-primary" onclick="downloadPDF()">
+                        <i class="fas fa-file-pdf"></i>
+                        Download PDF
+                    </button>
+
+                    <button class="btn btn-outline" onclick="toggleAnswer()">
+                        <i class="fas fa-eye"></i>
+                        View Answer
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Answer Explanation -->
+            <div class="answer-section" id="answerSection" style="display: none;">
+
+                <h3>
+                    <i class="fas fa-lightbulb"></i>
+                    Answer Explanation:
+                </h3>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+        href="https://wa.me/917011904551?text=I%20have%20a%20query%20regarding%20UPSC%20CSAT%20Question%2025."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact us on WhatsApp">
+
+        <i class="fab fa-whatsapp"></i>
+
+    </a>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>
+                © 2027 Kusum Maths Classes · Developed by Faisal Rasheed
+            </p>
+        </div>
+    </footer>
+
+    <!-- PDF Generator -->
+    <script src="../../scripts/pdf-generator.js"></script>
+
+    <!-- Page Scripts -->
+    <script>
+
+        // Render mathematical expressions
+        document.addEventListener("DOMContentLoaded", function () {
+
+            if (typeof renderMathInElement === "function") {
+
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                        { left: "\\(", right: "\\)", display: false },
+                        { left: "\\[", right: "\\]", display: true }
+                    ],
+                    throwOnError: false
+                });
+
+            }
+
+        });
+
+
+        // Show or hide answer explanation
+        function toggleAnswer() {
+
+            const answerSection = document.getElementById("answerSection");
+            const isHidden = answerSection.style.display === "none";
+
+            answerSection.style.display = isHidden ? "block" : "none";
+
+        }
+
+
+        // Select an answer option
+        document.querySelectorAll(".option").forEach(function (option) {
+
+            option.addEventListener("click", function () {
+
+                document.querySelectorAll(".option").forEach(function (item) {
+                    item.classList.remove("selected");
+                });
+
+                this.classList.add("selected");
+
+            });
+
+        });
+
+
+        // Mobile navigation toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const mainNav = document.getElementById("mainNav");
+
+        if (menuToggle && mainNav) {
+
+            menuToggle.addEventListener("click", function () {
+                mainNav.classList.toggle("active");
+            });
+
+        }
+
+
+        // Share question
+        function shareQuestion() {
+
+            const shareData = {
+                title: "Question 25 | Kusum Maths Classes",
+                text: "Practice Question 25 - UPSC CSAT",
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+
+                navigator.share(shareData).catch(function (error) {
+                    console.log("Sharing cancelled:", error);
+                });
+
+            } else {
+
+                navigator.clipboard.writeText(window.location.href);
+                alert("Question link copied!");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
