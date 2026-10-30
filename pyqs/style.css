@@ -45,7 +45,7 @@ button {
 }
 
 .container {
-  width: min(1000px, calc(100% - 32px));
+  width: min(1200px, calc(100% - 32px));
   margin: auto;
   position: relative;
   z-index: 2;
