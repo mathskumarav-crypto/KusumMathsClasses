@@ -1,3 +1,4 @@
+
 :root {
   --blue: #1d6bf3;
   --blue-dark: #0f4bb8;
@@ -26,7 +27,7 @@ html {
 }
 
 body {
-  font: 15px/1.6 var(--font-body);
+  font: 19px/1.6 var(--font-body);
   background: var(--page);
   color: var(--ink);
   padding-bottom: 100px;
@@ -56,7 +57,7 @@ button {
   border-bottom: 1px solid var(--line);
   color: #ffffff;
   padding: 12px 15px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
 }
 
@@ -86,7 +87,7 @@ header {
   align-items: center;
   gap: 10px;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 19px;
   color: var(--ink);
   font-family: var(--font-heading);
 }
@@ -102,7 +103,7 @@ header {
 
 .logo small {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1.2px;
   color: var(--muted);
   font-weight: 700;
@@ -117,7 +118,7 @@ header {
 }
 
 .nav-links a {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--ink-light);
   transition: color 0.2s ease;
@@ -151,7 +152,7 @@ header {
 }
 
 .global-directions .h2 {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   color: #555555;
   margin: 0 0 8px 0;
@@ -161,7 +162,7 @@ header {
   background: #f9f9f9;
   border-left: 4px solid #0066cc;
   padding: 14px;
-  font-size: 13px;
+  font-size: 17px;
   color: var(--ink-light);
   margin: 0;
 }
@@ -209,7 +210,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  font-size: 12px;
+  font-size: 16px;
   color: #666666;
 }
 
@@ -238,7 +239,7 @@ header {
 }
 
 .question_heading {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   margin: 0;
   color: var(--ink);
@@ -248,7 +249,7 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 16px;
   padding: 6px 12px;
   border-radius: 50px;
   background: var(--blue-light);
@@ -267,7 +268,7 @@ header {
 }
 
 .questionBody.tag-h1 {
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 500;
   line-height: 1.6;
   margin-bottom: 16px;
@@ -296,7 +297,7 @@ header {
   border: 1px solid var(--line);
   padding: 12px 14px;
   border-radius: 6px;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.5;
   color: var(--ink-light);
   cursor: pointer;
@@ -347,14 +348,14 @@ header {
 }
 
 .pyp-heading {
-  font-size: 10px;
+  font-size: 14px;
   text-transform: uppercase;
   color: #666666;
   font-weight: 700;
 }
 
 .pyp-title {
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 700;
   color: #004085;
 }
@@ -381,7 +382,7 @@ header {
   color: #ffffff;
   padding: 8px 14px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   display: inline-flex;
@@ -395,7 +396,7 @@ header {
   border: none;
   padding: 8px 14px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   display: inline-flex;
@@ -418,7 +419,7 @@ header {
   border: 1px solid #0066cc;
   padding: 8px 14px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
@@ -434,7 +435,7 @@ header {
 
 .pyp-view-all {
   display: inline-block;
-  font-size: 11px;
+  font-size: 15px;
   color: #0066cc;
   margin-bottom: 16px;
   text-decoration: none;
@@ -448,7 +449,7 @@ header {
   background: #f0fdf4;
   border: 1px solid #bbf7d0;
   border-radius: 6px;
-  font-size: 13px;
+  font-size: 17px;
   color: #166534;
 }
 
@@ -490,7 +491,7 @@ footer {
   text-align: center;
   padding: 10px 16px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -500,10 +501,12 @@ footer a {
 }
 
 @media(max-width: 768px) {
+
   .menu-toggle {
     display: block;
     margin-left: auto;
   }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -517,26 +520,32 @@ footer a {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     flex-direction: column;
   }
+
   .nav-links.active {
     display: flex;
   }
+
   .nav-links a {
     padding: 10px 0;
     border-bottom: 1px solid var(--line);
     width: 100%;
   }
+
   .pyp-bottom-bar {
     flex-direction: column;
     align-items: stretch;
   }
+
   .pyp-left-buttons {
     flex-direction: column;
     width: 100%;
   }
+
   .attempt-test-link,
   .solpdf-download-link,
   .view-answer-btn {
     width: 100%;
     justify-content: center;
   }
+
 }
