@@ -1,348 +1,724 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
-<title>Question 32 | Kusum Maths Classes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
 
-<link rel="icon" type="image/png" href="../../logo.png">
-<link rel="stylesheet" href="../style.css">
+    <title>Question 32 | Kusum Maths Classes</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../../logo.png">
+    <link rel="stylesheet" href="../style.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-<script defer src="../../scripts/pdf-generator.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<style>
-.question-statements { margin: 14px 0; }
-.numbered-point {
-    display: grid;
-    grid-template-columns: 26px minmax(0, 1fr);
-    column-gap: 5px;
-    align-items: start;
-    margin: 0 0 10px;
-    line-height: 1.55;
-}
-.point-number { font-weight: 500; }
-.point-text { min-width: 0; }
-</style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+
+    <script defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+    <!-- PDF Generator -->
+    <script defer src="../../scripts/pdf-generator.js"></script>
+
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLC3T1TLCD"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-PLC3T1TLCD');
+    </script>
+
+
+    <style>
+        .question-statements {
+            margin: 14px 0;
+        }
+
+        .numbered-point {
+            display: grid;
+            grid-template-columns: 26px minmax(0, 1fr);
+            column-gap: 5px;
+            align-items: start;
+            margin: 0 0 10px;
+            line-height: 1.55;
+        }
+
+        .point-number {
+            font-weight: 500;
+        }
+
+        .point-text {
+            min-width: 0;
+        }
+    </style>
+
 </head>
+
 
 <body>
 
-<div class="top-strip">
-    <strong>UPSC CSAT 2027</strong>
-    &nbsp;·&nbsp; UPSC CSAT Practice Sets
-</div>
-
-<header>
-    <div class="container navbar">
-        <a class="logo" href="../../index.html">
-            <img src="../../logo.png" alt="Logo" class="logo-img">
-            <span>
-                KUSUM MATHS CLASSES
-                <small>LEARN · PRACTISE · SUCCEED</small>
-            </span>
-        </a>
-
-        <button class="menu-toggle" id="menu-toggle" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <nav class="nav-links" id="nav-links">
-            <a href="../../index.html">Home</a>
-            <a href="../../courses.html">Courses</a>
-            <a href="../../study-material.html">Study Material</a>
-            <a href="../../pyqs.html">PYQs</a>
-        </nav>
+    <!-- Top Strip -->
+    <div class="top-strip">
+        <strong>UPSC CSAT 2027</strong>
+        &nbsp;·&nbsp; UPSC CSAT Practice Sets
     </div>
-</header>
 
-<div class="content-wrap">
-    <div class="container">
 
-        <!-- Shared Passage Directions -->
-        <div class="global-directions">
-            <div class="h2">Directions for the next 2 (two) items :</div>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
 
-            <div class="comprehension">
-                <p class="comprehension-intro">
-                    Read the following passage and answer the items that follow.
-                    Your answers should be based solely on the passage.
-                </p>
+            <a class="logo" href="../../index.html">
 
-                <p style="text-align:center; font-weight:700; margin:12px 0;">
-                    Passage
-                </p>
+                <img src="../../logo.png" alt="Logo" class="logo-img">
 
-                <p>
-                    India is starting to deploy AI for critical use cases such as
-                    weather forecasting, pest detection and control, and crop yield
-                    optimisation. However, penetration is limited to a small subset
-                    of tech-savvy farmers. In the US and in Europe, generative AI tools
-                    have started offering precision farming at scale, integrating
-                    large datasets to provide real-time agronomic insights.
-                    For at-scale integration and accessibility of AI tools in India,
-                    it would be helpful to develop Indian languages-based AI tools
-                    for smallholder farmers, partner with AgTechs to create affordable
-                    AI solutions, and disseminate AI-based advisory services through
-                    government programmes.
-                </p>
-            </div>
+                <span>
+                    KUSUM MATHS CLASSES
+                    <small>LEARN · PRACTISE · SUCCEED</small>
+                </span>
+
+            </a>
+
+
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <nav class="nav-links" id="nav-links">
+
+                <a href="../../index.html">Home</a>
+                <a href="../../courses.html">Courses</a>
+                <a href="../../study-material.html">Study Material</a>
+                <a href="../../pyqs.html">PYQs</a>
+
+            </nav>
+
         </div>
+    </header>
 
-        <div class="card" data-correct="">
 
-            <ul class="breadcrumbs">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../../courses.html">UPSC CSAT</a></li>
-                <li><a href="../../study-material.html">CSAT Practice</a></li>
-            </ul>
 
-            <div class="questionBody">
+    <!-- Main Content -->
+    <div class="content-wrap">
 
-                <div class="question__header">
-                    <h2 class="question_heading">Question 32</h2>
-                    <button type="button" class="share-btn" onclick="shareQuestion(this)">
-                        <i class="fa-solid fa-share-nodes"></i>
-                        <span>Share</span>
-                    </button>
+        <div class="container">
+
+
+            <!-- Shared Passage Directions -->
+            <div class="global-directions">
+
+                <div class="h2">
+                    Directions for the next 2 (two) items :
                 </div>
 
-                <h1 class="questionBody tag-h1">
-                    <span>
-                        Which of the following statements is/are
-                        <strong><em>not</em></strong> correct?
-                    </span>
-                </h1>
 
-                <div class="question-statements">
+                <div class="comprehension">
 
-                    <p class="numbered-point">
-                        <span class="point-number">1.</span>
-                        <span class="point-text">
-                            Tech-savvy farmers will drive the AgTech companies
-                            of the future.
-                        </span>
+                    <p class="comprehension-intro">
+                        Read the following passage and answer the items that follow.
+                        Your answers should be based solely on the passage.
                     </p>
 
-                    <p class="numbered-point">
-                        <span class="point-number">2.</span>
-                        <span class="point-text">
-                            The development of advisory services by the government
-                            programmes for the use of AI tools in agriculture
-                            would be helpful.
-                        </span>
+
+                    <p style="text-align:center; font-weight:700; margin:12px 0;">
+                        Passage
                     </p>
 
-                    <p class="numbered-point">
-                        <span class="point-number">3.</span>
-                        <span class="point-text">
-                            In the US and Europe, AI tools have replaced traditional
-                            agricultural practices.
-                        </span>
-                    </p>
 
-                    <p class="numbered-point">
-                        <span class="point-number">4.</span>
-                        <span class="point-text">
-                            The integration of large datasets for use in real-time
-                            agronomic analysis is already a reality.
-                        </span>
+                    <p>
+                        India is starting to deploy AI for critical use cases such as
+                        weather forecasting, pest detection and control, and crop yield
+                        optimisation. However, penetration is limited to a small subset
+                        of tech-savvy farmers. In the US and in Europe, generative AI tools
+                        have started offering precision farming at scale, integrating
+                        large datasets to provide real-time agronomic insights.
+                        For at-scale integration and accessibility of AI tools in India,
+                        it would be helpful to develop Indian languages-based AI tools
+                        for smallholder farmers, partner with AgTechs to create affordable
+                        AI solutions, and disseminate AI-based advisory services through
+                        government programmes.
                     </p>
 
                 </div>
 
-                <h1 class="questionBody tag-h1">
-                    <span>Select the answer using the code given below.</span>
-                </h1>
+            </div>
 
-                <div class="options">
-                    <ul class="options-list">
 
-                        <li class="option" data-option="a">
-                            <strong>(a)</strong>
-                            <span>1 and 3 only</span>
-                        </li>
 
-                        <li class="option" data-option="b">
-                            <strong>(b)</strong>
-                            <span>1, 3 and 4</span>
-                        </li>
+            <!-- Question Card -->
+            <div class="card" data-correct="">
 
-                        <li class="option" data-option="c">
-                            <strong>(c)</strong>
-                            <span>2 and 4</span>
-                        </li>
+                <ul class="breadcrumbs">
 
-                        <li class="option" data-option="d">
-                            <strong>(d)</strong>
-                            <span>3 only</span>
-                        </li>
+                    <li>
+                        <a href="../../index.html">Home</a>
+                    </li>
 
-                    </ul>
-                </div>
+                    <li>
+                        <a href="../../courses.html">UPSC CSAT</a>
+                    </li>
 
-                <div class="pure-g pure-u-1">
-                    <div class="pyp-box pure-g">
+                    <li>
+                        <a href="../../study-material.html">CSAT Practice</a>
+                    </li>
 
-                        <div>
-                            <div class="pyp-heading">Practice question</div>
-                            <div class="pyp-title">UPSC CSAT — Practice Set</div>
-                        </div>
+                </ul>
 
-                        <div class="pyp-bottom-bar">
 
-                            <div class="pyp-left-buttons">
-                                <a href="#" target="_blank" class="attempt-test-link">
-                                    Attempt Online
-                                </a>
 
-                                <button type="button"
-                                    class="solpdf-download-link active"
-                                    onclick="downloadQuestionPDF(this)">
+                <div class="questionBody">
 
-                                    <svg width="12" height="12" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g fill-rule="evenodd">
-                                            <path d="M10 14c.3 0 .5-.1.7-.3L16.4 8 15 6.6l-4 4V2H9v8.6l-4-4L3.6 8l5.7 5.7c.2.2.4.3.7.3z"></path>
-                                            <path d="M16 16H4v-3H2v4c0 .6.4 1 1 1h14c.6 0 1-.4 1-1v-4h-2v3z"></path>
-                                        </g>
-                                    </svg>
 
-                                    Download Solution PDF
-                                </button>
+                    <!-- Question Header -->
+                    <div class="question__header">
+
+                        <h2 class="question_heading">Question 32</h2>
+
+                        <button type="button" class="share-btn"
+                            onclick="shareQuestion(this)">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>Share</span>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Question -->
+                    <h1 class="questionBody tag-h1">
+
+                        <span>
+                            Which of the following statements is/are
+                            <strong><em>not</em></strong> correct?
+                        </span>
+
+                    </h1>
+
+
+
+                    <!-- Numbered Statements -->
+                    <div class="question-statements">
+
+
+                        <p class="numbered-point">
+
+                            <span class="point-number">1.</span>
+
+                            <span class="point-text">
+                                Tech-savvy farmers will drive the AgTech companies
+                                of the future.
+                            </span>
+
+                        </p>
+
+
+
+                        <p class="numbered-point">
+
+                            <span class="point-number">2.</span>
+
+                            <span class="point-text">
+                                The development of advisory services by the government
+                                programmes for the use of AI tools in agriculture
+                                would be helpful.
+                            </span>
+
+                        </p>
+
+
+
+                        <p class="numbered-point">
+
+                            <span class="point-number">3.</span>
+
+                            <span class="point-text">
+                                In the US and Europe, AI tools have replaced traditional
+                                agricultural practices.
+                            </span>
+
+                        </p>
+
+
+
+                        <p class="numbered-point">
+
+                            <span class="point-number">4.</span>
+
+                            <span class="point-text">
+                                The integration of large datasets for use in real-time
+                                agronomic analysis is already a reality.
+                            </span>
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- Instruction -->
+                    <h1 class="questionBody tag-h1">
+
+                        <span>
+                            Select the answer using the code given below.
+                        </span>
+
+                    </h1>
+
+
+
+                    <!-- Options -->
+                    <div class="options">
+
+                        <ul class="options-list">
+
+
+                            <li class="option" data-option="a">
+
+                                <strong>(a)</strong>
+                                <span>1 and 3 only</span>
+
+                            </li>
+
+
+
+                            <li class="option" data-option="b">
+
+                                <strong>(b)</strong>
+                                <span>1, 3 and 4</span>
+
+                            </li>
+
+
+
+                            <li class="option" data-option="c">
+
+                                <strong>(c)</strong>
+                                <span>2 and 4</span>
+
+                            </li>
+
+
+
+                            <li class="option" data-option="d">
+
+                                <strong>(d)</strong>
+                                <span>3 only</span>
+
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- PYQ Section -->
+                    <div class="pure-g pure-u-1">
+
+                        <div class="pyp-box pure-g">
+
+
+                            <div>
+
+                                <div class="pyp-heading">
+                                    Practice question
+                                </div>
+
+                                <div class="pyp-title">
+                                    UPSC CSAT — Practice Set
+                                </div>
+
                             </div>
 
-                            <button type="button" class="view-answer-btn">
-                                <i class="fa-regular fa-eye"></i>
-                                View Answer
-                            </button>
+
+
+                            <div class="pyp-bottom-bar">
+
+
+                                <div class="pyp-left-buttons">
+
+                                    <a href="#" target="_blank"
+                                        class="attempt-test-link">
+
+                                        Attempt Online
+
+                                    </a>
+
+
+
+                                    <button type="button"
+                                        class="solpdf-download-link active"
+                                        onclick="downloadQuestionPDF(this)">
+
+
+                                        <svg width="12" height="12"
+                                            viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+
+                                            <g fill-rule="evenodd">
+
+                                                <path d="M10 14c.3 0 .5-.1.7-.3L16.4 8 15 6.6l-4 4V2H9v8.6l-4-4L3.6 8l5.7 5.7c.2.2.4.3.7.3z"></path>
+
+                                                <path d="M16 16H4v-3H2v4c0 .6.4 1 1 1h14c.6 0 1-.4 1-1v-4h-2v3z"></path>
+
+                                            </g>
+
+                                        </svg>
+
+
+                                        Download Solution PDF
+
+                                    </button>
+
+                                </div>
+
+
+
+                                <button type="button" class="view-answer-btn">
+
+                                    <i class="fa-regular fa-eye"></i>
+                                    View Answer
+
+                                </button>
+
+
+                            </div>
 
                         </div>
-                    </div>
-                </div>
 
-                <div class="answer-section">
-                    <strong>Answer Explanation:</strong>
+                    </div>
+
+
+
+                    <!-- Answer Section -->
+                    <div class="answer-section">
+
+                        <strong>Answer Explanation:</strong>
+
+                    </div>
+
+
                 </div>
 
             </div>
+
         </div>
+
     </div>
-</div>
 
-<a class="floating-whatsapp"
-   href="https://wa.me/917011904551?text=Hello!%20I%20have%20a%20doubt%20regarding%20Question%2032."
-   target="_blank"
-   rel="noopener"
-   aria-label="Chat on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
 
-<footer>
-    © 2027 Kusum Maths Classes
-    &nbsp;·&nbsp; Developed by
-    <a href="../../faisal-rasheed.html">Faisal Rasheed</a>
-</footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+    <!-- WhatsApp Button -->
+    <a class="floating-whatsapp"
+        href="https://wa.me/917011904551?text=Hello!%20I%20have%20a%20doubt%20regarding%20Question%2032."
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat on WhatsApp">
 
-    if (typeof renderMathInElement === "function") {
-        renderMathInElement(document.body, {
-            delimiters: [
-                { left: "$$", right: "$$", display: true },
-                { left: "$", right: "$", display: false },
-                { left: "\\(", right: "\\)", display: false },
-                { left: "\\[", right: "\\]", display: true }
-            ],
-            throwOnError: false
-        });
-    }
+        <i class="fa-brands fa-whatsapp"></i>
 
-    document.querySelectorAll(".card").forEach(function (card) {
+    </a>
 
-        const correct = card.getAttribute("data-correct");
-        const opts = card.querySelectorAll(".option");
-        const ans = card.querySelector(".answer-section");
-        const btn = card.querySelector(".view-answer-btn");
 
-        btn.addEventListener("click", function () {
-            ans.classList.toggle("show");
 
-            btn.innerHTML = ans.classList.contains("show")
-                ? '<i class="fa-regular fa-eye-slash"></i> Hide Answer'
-                : '<i class="fa-regular fa-eye"></i> View Answer';
-        });
+    <!-- Footer -->
+    <footer>
 
-        opts.forEach(function (opt) {
-            opt.addEventListener("click", function () {
+        © 2027 Kusum Maths Classes
+        &nbsp;·&nbsp; Developed by
+        <a href="../../faisal-rasheed.html">Faisal Rasheed</a>
 
-                if (card.classList.contains("answered")) return;
+    </footer>
 
-                card.classList.add("answered");
 
-                const selected = this.getAttribute("data-option");
 
-                opts.forEach(function (item) {
-                    item.style.pointerEvents = "none";
+    <!-- Page JavaScript -->
+    <script>
 
-                    if (correct && item.getAttribute("data-option") === correct) {
-                        item.classList.add("correct");
-                    }
+        // ----------------------------------------
+        // GOOGLE ANALYTICS EVENT TRACKING
+        // ----------------------------------------
+
+        function trackQuestionEvent(eventName, parameters = {}) {
+
+            if (typeof gtag !== "function") return;
+
+            const heading = document.querySelector(".question_heading");
+
+            const questionNumber = heading
+                ? heading.textContent.trim().replace("Question ", "")
+                : "Unknown";
+
+
+            gtag("event", eventName, {
+
+                question_number: questionNumber,
+                page_title: document.title,
+
+                ...parameters
+
+            });
+
+        }
+
+
+
+        // ----------------------------------------
+        // PAGE INITIALIZATION
+        // ----------------------------------------
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            // Render Mathematical Expressions
+            if (typeof renderMathInElement === "function") {
+
+                renderMathInElement(document.body, {
+
+                    delimiters: [
+
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                        { left: "\\(", right: "\\)", display: false },
+                        { left: "\\[", right: "\\]", display: true }
+
+                    ],
+
+                    throwOnError: false
+
                 });
 
-                if (correct && selected !== correct) {
-                    this.classList.add("incorrect");
-                }
+            }
 
-                ans.classList.add("show");
-                btn.innerHTML = '<i class="fa-regular fa-eye-slash"></i> Hide Answer';
+
+
+            // Track Question View
+            trackQuestionEvent("question_view");
+
+
+
+            // ----------------------------------------
+            // QUESTION ANSWER FUNCTIONALITY
+            // ----------------------------------------
+
+            document.querySelectorAll(".card").forEach(function (card) {
+
+
+                const correct = card.getAttribute("data-correct");
+
+                const opts = card.querySelectorAll(".option");
+
+                const ans = card.querySelector(".answer-section");
+
+                const btn = card.querySelector(".view-answer-btn");
+
+
+
+                // View / Hide Answer
+                btn.addEventListener("click", function () {
+
+                    ans.classList.toggle("show");
+
+
+                    btn.innerHTML = ans.classList.contains("show")
+
+                        ? '<i class="fa-regular fa-eye-slash"></i> Hide Answer'
+
+                        : '<i class="fa-regular fa-eye"></i> View Answer';
+
+
+
+                    // Track Answer Reveal
+                    if (ans.classList.contains("show")) {
+
+                        trackQuestionEvent("answer_reveal");
+
+                    }
+
+                });
+
+
+
+                // Option Selection
+                opts.forEach(function (opt) {
+
+                    opt.addEventListener("click", function () {
+
+
+                        if (card.classList.contains("answered")) return;
+
+
+                        card.classList.add("answered");
+
+
+                        const selected = this.getAttribute("data-option");
+
+
+
+                        // Track Selected Option
+                        trackQuestionEvent("option_select", {
+
+                            selected_option: selected
+
+                        });
+
+
+
+                        opts.forEach(function (item) {
+
+                            item.style.pointerEvents = "none";
+
+
+                            if (correct && item.getAttribute("data-option") === correct) {
+
+                                item.classList.add("correct");
+
+                            }
+
+                        });
+
+
+
+                        if (correct && selected !== correct) {
+
+                            this.classList.add("incorrect");
+
+                        }
+
+
+
+                        ans.classList.add("show");
+
+                        btn.innerHTML =
+                            '<i class="fa-regular fa-eye-slash"></i> Hide Answer';
+
+
+                    });
+
+                });
+
             });
+
+
+
+            // ----------------------------------------
+            // MOBILE MENU
+            // ----------------------------------------
+
+            const toggle = document.getElementById("menu-toggle");
+
+            const nav = document.getElementById("nav-links");
+
+
+            toggle.addEventListener("click", function () {
+
+                const open = nav.classList.toggle("active");
+
+
+                toggle.setAttribute("aria-expanded", String(open));
+
+
+                toggle.innerHTML = open
+
+                    ? '<i class="fa-solid fa-xmark"></i>'
+
+                    : '<i class="fa-solid fa-bars"></i>';
+
+            });
+
+
+
+            // ----------------------------------------
+            // PDF DOWNLOAD TRACKING
+            // ----------------------------------------
+
+            document.querySelectorAll(".solpdf-download-link").forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    trackQuestionEvent("pdf_download");
+
+                });
+
+            });
+
         });
-    });
 
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav-links");
 
-    toggle.addEventListener("click", function () {
-        const open = nav.classList.toggle("active");
 
-        toggle.setAttribute("aria-expanded", String(open));
+        // ----------------------------------------
+        // SHARE QUESTION
+        // ----------------------------------------
 
-        toggle.innerHTML = open
-            ? '<i class="fa-solid fa-xmark"></i>'
-            : '<i class="fa-solid fa-bars"></i>';
-    });
-});
+        function shareQuestion(button) {
 
-function shareQuestion(button) {
-    const h = button.closest(".card").querySelector(".question_heading");
-    const title = h.textContent + " | Kusum Maths Classes";
 
-    if (navigator.share) {
-        navigator.share({
-            title: title,
-            url: location.href
-        }).catch(function () {});
-    } else if (navigator.clipboard) {
-        navigator.clipboard.writeText(location.href).then(function () {
-            alert("Link copied to clipboard!");
-        });
-    } else {
-        prompt("Copy this page link:", location.href);
-    }
-}
-</script>
+            // Track Share Button Click
+            trackQuestionEvent("share_question");
+
+
+            const h = button.closest(".card").querySelector(".question_heading");
+
+            const title = h.textContent + " | Kusum Maths Classes";
+
+
+            if (navigator.share) {
+
+                navigator.share({
+
+                    title: title,
+                    url: location.href
+
+                }).catch(function () {});
+
+
+            } else if (navigator.clipboard) {
+
+                navigator.clipboard.writeText(location.href).then(function () {
+
+                    alert("Link copied to clipboard!");
+
+                });
+
+
+            } else {
+
+                prompt("Copy this page link:", location.href);
+
+            }
+
+        }
+
+    </script>
+
 
 </body>
+
 </html>
