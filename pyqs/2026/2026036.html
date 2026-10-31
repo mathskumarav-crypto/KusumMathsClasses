@@ -6,20 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Question 36 | UPSC CSAT 2027 | Kusum Maths Classes</title>
+    <title>Question 36 | Kusum Maths Classes</title>
 
     <link rel="icon" type="image/png" href="../../logo.png">
     <link rel="stylesheet" href="../style.css">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+    <!-- PDF Generator -->
+    <script defer src="../../scripts/pdf-generator.js"></script>
 
     <!-- Google Ads Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701066141"></script>
@@ -34,11 +40,11 @@
         gtag('config', 'AW-17701066141');
     </script>
 
+    <!-- Question Formatting -->
     <style>
         .questionBody.tag-h1 {
             text-align: justify;
             text-justify: inter-word;
-            line-height: 1.65;
         }
 
         .question-statements {
@@ -70,212 +76,219 @@
 
 <body>
 
+    <!-- Top Strip -->
     <div class="top-strip">
         <strong>UPSC CSAT 2027</strong>
-        &nbsp;·&nbsp;
-        UPSC CSAT Practice Sets
+        &nbsp;·&nbsp; UPSC CSAT Practice Sets
     </div>
 
-    <header class="container navbar">
-        <a href="../../index.html" class="logo">
-            <img src="../../logo.png" alt="Kusum Maths Classes">
-        </a>
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
 
-        <button class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
+            <a class="logo" href="../../index.html">
+                <img src="../../logo.png" alt="Logo" class="logo-img">
 
-        <nav class="nav-links" id="nav-links">
-            <a href="../../index.html">Home</a>
-            <a href="../index.html">Practice Sets</a>
-            <a href="../../about.html">About</a>
-            <a href="../../contact.html">Contact</a>
-        </nav>
+                <span>
+                    KUSUM MATHS CLASSES
+                    <small>LEARN · PRACTISE · SUCCEED</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../courses.html">Courses</a>
+                <a href="../../study-material.html">Study Material</a>
+                <a href="../../pyqs.html">PYQs</a>
+            </nav>
+
+        </div>
     </header>
 
-    <main class="content-wrap">
+    <!-- Main Content -->
+    <div class="content-wrap">
         <div class="container">
 
+            <!-- Question Card -->
             <div class="card" data-correct="">
 
-                <div class="breadcrumbs">
-                    <a href="../../index.html">Home</a>
-                    <span>/</span>
-                    <a href="../index.html">UPSC CSAT</a>
-                    <span>/</span>
-                    <span>Question 36</span>
-                </div>
+                <!-- Breadcrumbs -->
+                <ul class="breadcrumbs">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../courses.html">UPSC CSAT</a></li>
+                    <li><a href="../../study-material.html">CSAT Practice</a></li>
+                </ul>
 
                 <div class="questionBody">
 
+                    <!-- Question Heading -->
                     <div class="question__header">
-                        <h1 class="question_heading">
-                            Question 36
-                        </h1>
 
-                        <button class="share-btn"
-                                onclick="shareQuestion()"
-                                aria-label="Share question">
-                            <i class="fas fa-share-alt"></i>
+                        <h2 class="question_heading">
+                            Question 36
+                        </h2>
+
+                        <button type="button" class="share-btn" onclick="shareQuestion(this)">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>Share</span>
                         </button>
+
                     </div>
 
-                    <div class="questionBody tag-h1">
-
-                        <p>
+                    <!-- Question -->
+                    <h1 class="questionBody tag-h1">
+                        <span>
                             There are four statements X, Y, Z and W.
                             Their relations are as follows:
-                        </p>
-
-                        <p>
+                            <br><br>
                             If X is incorrect, then so is Z; if Y is
                             incorrect, then W is correct; if W is
                             correct, then X is incorrect.
-                        </p>
-
-                        <p>
+                            <br><br>
                             Which of the following is/are correct?
+                        </span>
+                    </h1>
+
+                    <!-- Numbered Statements -->
+                    <div class="question-statements">
+
+                        <p class="numbered-point">
+                            <span class="point-number">I.</span>
+                            <span class="point-text">
+                                If X is correct, then so is Y.
+                            </span>
                         </p>
 
-                        <div class="question-statements">
-
-                            <div class="numbered-point">
-                                <span class="point-number">I.</span>
-                                <span class="point-text">
-                                    If X is correct, then so is Y.
-                                </span>
-                            </div>
-
-                            <div class="numbered-point">
-                                <span class="point-number">II.</span>
-                                <span class="point-text">
-                                    If Z is correct, then it is not
-                                    necessary that Y is correct.
-                                </span>
-                            </div>
-
-                        </div>
-
-                        <p>
-                            Select the answer using the code given below.
+                        <p class="numbered-point">
+                            <span class="point-number">II.</span>
+                            <span class="point-text">
+                                If Z is correct, then it is not
+                                necessary that Y is correct.
+                            </span>
                         </p>
 
                     </div>
 
+                    <!-- Answer Selection Instruction -->
+                    <h1 class="questionBody tag-h1">
+                        <span>
+                            Select the answer using the code given below.
+                        </span>
+                    </h1>
+
+                    <!-- Options -->
                     <div class="options">
                         <ul class="options-list">
 
                             <li class="option" data-option="a">
-                                <span class="option-label">(a)</span>
-                                <span class="option-text">I only</span>
+                                <strong>(a)</strong>
+                                <span>I only</span>
                             </li>
 
                             <li class="option" data-option="b">
-                                <span class="option-label">(b)</span>
-                                <span class="option-text">II only</span>
+                                <strong>(b)</strong>
+                                <span>II only</span>
                             </li>
 
                             <li class="option" data-option="c">
-                                <span class="option-label">(c)</span>
-                                <span class="option-text">
-                                    Both I and II
-                                </span>
+                                <strong>(c)</strong>
+                                <span>Both I and II</span>
                             </li>
 
                             <li class="option" data-option="d">
-                                <span class="option-label">(d)</span>
-                                <span class="option-text">
-                                    Neither I nor II
-                                </span>
+                                <strong>(d)</strong>
+                                <span>Neither I nor II</span>
                             </li>
 
                         </ul>
                     </div>
 
-                </div>
+                    <!-- Practice Question Box -->
+                    <div class="pure-g pure-u-1">
+                        <div class="pyp-box pure-g">
 
-                <div class="pure-g pure-u-1">
-                    <div class="pyp-box pure-g">
+                            <div>
+                                <div class="pyp-heading">
+                                    Practice question
+                                </div>
 
-                        <div class="pyp-heading">
-                            <div class="pyp-title">
-                                <i class="fas fa-book-open"></i>
-                                UPSC CSAT Practice Question
-                            </div>
-                        </div>
-
-                        <div class="pyp-bottom-bar">
-
-                            <div class="pyp-left-buttons">
-
-                                <a href="#"
-                                   class="attempt-test-link">
-                                    <i class="fas fa-pen-to-square"></i>
-                                    Attempt Test
-                                </a>
-
-                                <a href="#"
-                                   class="solpdf-download-link">
-                                    <i class="fas fa-file-pdf"></i>
-                                    Solution PDF
-                                </a>
-
+                                <div class="pyp-title">
+                                    UPSC CSAT — Practice Set
+                                </div>
                             </div>
 
-                            <button class="view-answer-btn"
-                                    type="button">
-                                <i class="fas fa-eye"></i>
-                                View Answer
-                            </button>
+                            <div class="pyp-bottom-bar">
 
+                                <div class="pyp-left-buttons">
+
+                                    <a href="#" target="_blank" class="attempt-test-link">
+                                        Attempt Online
+                                    </a>
+
+                                    <button type="button"
+                                        class="solpdf-download-link active"
+                                        onclick="downloadQuestionPDF(this)">
+
+                                        <svg width="12" height="12" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g fill-rule="evenodd">
+                                                <path d="M10 14c.3 0 .5-.1.7-.3L16.4 8 15 6.6l-4 4V2H9v8.6l-4-4L3.6 8l5.7 5.7c.2.2.4.3.7.3z"></path>
+                                                <path d="M16 16H4v-3H2v4c0 .6.4 1 1 1h14c.6 0 1-.4 1-1v-4h-2v3z"></path>
+                                            </g>
+                                        </svg>
+
+                                        Download Solution PDF
+                                    </button>
+
+                                </div>
+
+                                <button type="button" class="view-answer-btn">
+                                    <i class="fa-regular fa-eye"></i>
+                                    View Answer
+                                </button>
+
+                            </div>
                         </div>
-
                     </div>
-                </div>
 
-                <div class="answer-section" style="display: none;">
-                    <strong>Answer Explanation:</strong>
-                </div>
+                    <!-- Answer Section -->
+                    <div class="answer-section">
+                        <strong>Answer Explanation:</strong>
+                    </div>
 
+                </div>
             </div>
 
         </div>
-    </main>
+    </div>
 
+    <!-- WhatsApp Floating Button -->
     <a class="floating-whatsapp"
-       href="https://wa.me/917011904551"
+       href="https://wa.me/917011904551?text=Hello!%20I%20have%20a%20doubt%20regarding%20Question%2036."
        target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Contact on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+       rel="noopener"
+       aria-label="Chat on WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>
-                © 2027 Kusum Maths Classes · Developed by
-                <a href="../../faisal-rasheed.html">Faisal Rasheed</a>
-            </p>
-        </div>
+        © 2027 Kusum Maths Classes
+        &nbsp;·&nbsp; Developed by
+        <a href="../../faisal-rasheed.html">Faisal Rasheed</a>
     </footer>
 
-    <script defer
-            src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js">
-    </script>
-
-    <script defer
-            src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js">
-    </script>
-
-    <script src="../../scripts/pdf-generator.js"></script>
-
+    <!-- Page Scripts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener("DOMContentLoaded", function () {
 
-            // Render mathematical expressions.
-            if (typeof renderMathInElement === 'function') {
+            // KaTeX Rendering
+            if (typeof renderMathInElement === "function") {
                 renderMathInElement(document.body, {
                     delimiters: [
                         { left: "$$", right: "$$", display: true },
@@ -287,93 +300,107 @@
                 });
             }
 
-            // Option selection.
-            const card = document.querySelector('.card');
-            const options = document.querySelectorAll('.option');
+            // Question Card Functionality
+            document.querySelectorAll(".card").forEach(function (card) {
 
-            options.forEach(function (option) {
-                option.addEventListener('click', function () {
+                const correct = card.getAttribute("data-correct");
+                const opts = card.querySelectorAll(".option");
+                const ans = card.querySelector(".answer-section");
+                const btn = card.querySelector(".view-answer-btn");
 
-                    options.forEach(function (item) {
-                        item.classList.remove('selected');
-                    });
+                // View / Hide Answer
+                btn.addEventListener("click", function () {
 
-                    option.classList.add('selected');
+                    ans.classList.toggle("show");
 
-                    const correctAnswer = card.dataset.correct;
+                    btn.innerHTML = ans.classList.contains("show")
+                        ? '<i class="fa-regular fa-eye-slash"></i> Hide Answer'
+                        : '<i class="fa-regular fa-eye"></i> View Answer';
 
-                    if (correctAnswer) {
-                        options.forEach(function (item) {
-                            item.classList.remove('correct', 'incorrect');
+                });
+
+                // Option Selection
+                opts.forEach(function (opt) {
+
+                    opt.addEventListener("click", function () {
+
+                        if (card.classList.contains("answered")) return;
+
+                        card.classList.add("answered");
+
+                        const selected = this.getAttribute("data-option");
+
+                        opts.forEach(function (item) {
+
+                            item.style.pointerEvents = "none";
+
+                            if (
+                                correct &&
+                                item.getAttribute("data-option") === correct
+                            ) {
+                                item.classList.add("correct");
+                            }
+
                         });
 
-                        if (option.dataset.option === correctAnswer) {
-                            option.classList.add('correct');
-                        } else {
-                            option.classList.add('incorrect');
-
-                            const correctOption = document.querySelector(
-                                '.option[data-option="' + correctAnswer + '"]'
-                            );
-
-                            if (correctOption) {
-                                correctOption.classList.add('correct');
-                            }
+                        if (correct && selected !== correct) {
+                            this.classList.add("incorrect");
                         }
-                    }
+
+                        ans.classList.add("show");
+
+                        btn.innerHTML =
+                            '<i class="fa-regular fa-eye-slash"></i> Hide Answer';
+
+                    });
+
                 });
+
             });
 
-            // Answer explanation visibility.
-            const answerButton = document.querySelector('.view-answer-btn');
-            const answerSection = document.querySelector('.answer-section');
+            // Mobile Navigation
+            const toggle = document.getElementById("menu-toggle");
+            const nav = document.getElementById("nav-links");
 
-            if (answerButton && answerSection) {
-                answerButton.addEventListener('click', function () {
+            toggle.addEventListener("click", function () {
 
-                    const isHidden =
-                        answerSection.style.display === 'none';
+                const open = nav.classList.toggle("active");
 
-                    answerSection.style.display =
-                        isHidden ? 'block' : 'none';
+                toggle.setAttribute("aria-expanded", String(open));
 
-                    answerButton.innerHTML = isHidden
-                        ? '<i class="fas fa-eye-slash"></i> Hide Answer'
-                        : '<i class="fas fa-eye"></i> View Answer';
-                });
-            }
+                toggle.innerHTML = open
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
 
-            // Mobile navigation.
-            const menuToggle = document.getElementById('menu-toggle');
-            const navLinks = document.getElementById('nav-links');
-
-            if (menuToggle && navLinks) {
-                menuToggle.addEventListener('click', function () {
-                    navLinks.classList.toggle('active');
-                });
-            }
+            });
 
         });
 
-        // Share question.
-        function shareQuestion() {
+        // Share Question
+        function shareQuestion(button) {
 
-            const shareData = {
-                title: 'UPSC CSAT 2027 - Question 36',
-                text: 'Practice Question 36 - Kusum Maths Classes',
-                url: window.location.href
-            };
+            const h = button.closest(".card").querySelector(".question_heading");
+            const title = h.textContent + " | Kusum Maths Classes";
 
             if (navigator.share) {
-                navigator.share(shareData).catch(function () {});
+
+                navigator.share({
+                    title: title,
+                    url: location.href
+                }).catch(function () {});
+
             } else if (navigator.clipboard) {
-                navigator.clipboard.writeText(window.location.href)
-                    .then(function () {
-                        alert('Question link copied!');
-                    });
+
+                navigator.clipboard.writeText(location.href).then(function () {
+                    alert("Link copied to clipboard!");
+                });
+
             } else {
-                prompt('Copy this question link:', window.location.href);
+
+                prompt("Copy this page link:", location.href);
+
             }
+
         }
     </script>
 
