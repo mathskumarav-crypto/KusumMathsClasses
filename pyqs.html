@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
+
+<!-- Google Ads Tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701066141"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'AW-17701066141');
+</script>
 <title>Previous Year Questions (PYQs) | Kusum Maths Classes</title>
 <!-- Tab Icon / Favicon -->
 <link rel="icon" type="image/png" href="logo.png">
@@ -504,7 +513,7 @@ document.getElementById('login-form').addEventListener('submit', e => {
 });
 
 // Build year cards and question links.
-// Example destination: 2026/2026001.html through 2026/2026080.html
+// Example destination: pyqs/2026/2026001.html through pyqs/2026/2026080.html
 const yearGrid = document.getElementById('year-grid');
 const questionSection = document.getElementById('question-section');
 const questionGrid = document.getElementById('question-grid');
@@ -535,7 +544,7 @@ function showQuestions(year) {
     const link = document.createElement('a');
     link.className = 'question-link';
     link.textContent = `Q. ${number}`;
-    link.href = `${year}/${year}${questionCode}.html`;
+    link.href = `https://kusummathsclasses.com/pyqs/${year}/${year}${questionCode}.html`;
     link.title = `Open ${year} Question ${number}`;
     questionGrid.appendChild(link);
   }
