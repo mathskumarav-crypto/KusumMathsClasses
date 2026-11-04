@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>UPSC CSAT 2026 Question 65: Alloy and Mixture Ratio | Kusum Maths Classes</title>
-
-<meta name="description" content="Practice UPSC CSAT 2026 Question 65 on alloy mixtures, copper and zinc percentages, and ratio calculations. Select your answer and practise with Kusum Maths Classes.">
-<meta name="keywords" content="UPSC CSAT 2026, CSAT Question 65, Alloy Questions, Mixture and Alligation, Ratio and Proportion, UPSC Maths, Kusum Maths Classes">
+<meta name="description" content="Practice UPSC CSAT 2026 Question 65 on alloy mixtures, copper and zinc percentages, and ratio calculations.">
+<meta name="keywords" content="UPSC CSAT 2026, CSAT Question 65, Alloy Questions, Mixture and Alligation, Ratio and Proportion">
 <meta name="author" content="Kusum Maths Classes">
 <meta name="robots" content="index, follow">
 
@@ -29,8 +29,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 
@@ -368,31 +368,30 @@ a {
     color: var(--primary);
 }
 
-.whatsapp-box {
-    text-align: center;
-    padding: 22px;
-    margin: 25px 0;
-    background: #effaf3;
-    border: 1px solid #d5efdd;
-    border-radius: 10px;
-}
-
-.whatsapp-box p {
-    margin: 0 0 12px;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.whatsapp-link {
-    display: inline-flex;
+/* Floating Fixed WhatsApp Chat Widget */
+.floating-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 58px;
+    height: 58px;
+    display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 17px;
-    background: #20a45a;
-    color: white;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 700;
+    justify-content: center;
+    background: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+    z-index: 9999;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.floating-whatsapp:hover {
+    background: #1da851;
+    color: #ffffff;
+    transform: scale(1.08);
 }
 
 .site-footer {
@@ -474,6 +473,14 @@ a {
     .solpdf-download-link {
         width: 100%;
     }
+
+    .floating-whatsapp {
+        width: 54px;
+        height: 54px;
+        right: 16px;
+        bottom: 16px;
+        font-size: 29px;
+    }
 }
 
 @media print {
@@ -487,7 +494,7 @@ a {
     .question-navigation,
     .pyp-box,
     .share-area,
-    .whatsapp-box,
+    .floating-whatsapp,
     .site-footer {
         display: none !important;
     }
@@ -621,15 +628,16 @@ a {
         </div>
     </section>
 
-    <section class="whatsapp-box">
-        <p>Join our WhatsApp group for updates and study materials.</p>
-        <a class="whatsapp-link" href="https://whatsapp.com/" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            Join WhatsApp Group
-        </a>
-    </section>
-
 </main>
+
+<!-- Floating Fixed WhatsApp Chat Widget targeting 7011904551 -->
+<a class="floating-whatsapp"
+   href="https://wa.me/917011904551?text=Hello!%20I%20want%20to%20enroll%20in%20this%20program.%20Please%20give%20me%20more%20details."
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <footer class="site-footer">
     <div class="footer-inner">
