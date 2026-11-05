@@ -37,6 +37,34 @@ gtag('config', 'AW-17701066141');
 </script>
 
 <style>
+/* Question 70 style table */
+.question-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0 24px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.question-data-table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.question-data-table th,
+.question-data-table td {
+    border: 1px solid #777;
+    padding: 9px 12px;
+}
+
+.question-data-table th {
+    font-style: italic;
+    font-weight: 500;
+    background: #f7f7f7;
+}
+
+/* Matching lists */
 .matching-lists {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -64,44 +92,39 @@ gtag('config', 'AW-17701066141');
     line-height: 1.55;
 }
 
-.katex-table {
-    overflow-x: auto;
-    margin: 20px 0 25px;
-    padding: 12px 5px;
-    text-align: center;
-}
-
-.katex-table .katex-display {
-    margin: 0;
-}
-
-.question-navigation {
-    display: flex;
+/* Previous / Next */
+.question-navigation-72 {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
     gap: 12px;
-    margin: 22px 0;
-    padding: 14px 0;
-    border-top: 1px solid #e5e7eb;
-    border-bottom: 1px solid #e5e7eb;
+    margin: 25px 0;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
-.question-nav-btn {
-    display: inline-flex;
+.question-navigation-72 a {
+    display: inline-flex !important;
+    visibility: visible !important;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 10px 16px;
-    border-radius: 7px;
+    gap: 9px;
+    padding: 11px 20px;
     background: #1769aa;
-    color: #fff;
-    text-decoration: none;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 7px;
     font-size: 14px;
     font-weight: 700;
+    min-width: 110px;
 }
 
-.question-nav-btn:hover {
+.question-navigation-72 a:hover {
     background: #0d4f85;
-    color: #fff;
 }
 
 @media(max-width:600px) {
@@ -110,13 +133,14 @@ gtag('config', 'AW-17701066141');
         gap: 10px;
     }
 
-    .katex-table .katex {
-        font-size: 0.9em;
+    .question-data-table {
+        min-width: 420px;
     }
 
-    .question-nav-btn {
-        padding: 9px 11px;
-        font-size: 12px;
+    .question-navigation-72 a {
+        padding: 10px 13px;
+        font-size: 13px;
+        min-width: 100px;
     }
 }
 </style>
@@ -172,7 +196,7 @@ gtag('config', 'AW-17701066141');
 </button>
 </div>
 
-<!-- Question -->
+<!-- Question Statement -->
 <h1 class="questionBody tag-h1">
 Match List-I with List-II and select the answer using the code given below the Lists:
 </h1>
@@ -236,19 +260,57 @@ List-II
 
 </div>
 
-<!-- Code Table in KaTeX -->
+<!-- Code Table: Same Format as Question 70 -->
 <h3>Code:</h3>
 
-<div class="katex-table">
-\[
-\begin{array}{c|cccc}
-\text{Option} & A & B & C & D \\ \hline
-(a) & 1 & 3 & 4 & 2 \\[6pt]
-(b) & 1 & 4 & 3 & 2 \\[6pt]
-(c) & 2 & 4 & 3 & 1 \\[6pt]
-(d) & 2 & 3 & 4 & 1
-\end{array}
-\]
+<div class="question-table-wrap">
+<table class="question-data-table">
+
+<thead>
+<tr>
+<th>Option</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>(a)</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>(b)</td>
+<td>1</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>(c)</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>(d)</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>1</td>
+</tr>
+</tbody>
+
+</table>
 </div>
 
 <!-- Answer Options -->
@@ -279,17 +341,19 @@ List-II
 </div>
 
 <!-- Previous / Next Navigation -->
-<nav class="question-navigation" aria-label="Question Navigation">
-<a href="2026071.html" class="question-nav-btn" id="prevQuestion">
+<div class="question-navigation-72">
+
+<a href="2026071.html" id="prevQuestion">
 <i class="fa-solid fa-arrow-left"></i>
 <span>Previous</span>
 </a>
 
-<a href="2026073.html" class="question-nav-btn" id="nextQuestion">
+<a href="2026073.html" id="nextQuestion">
 <span>Next</span>
 <i class="fa-solid fa-arrow-right"></i>
 </a>
-</nav>
+
+</div>
 
 <!-- Practice / Download Box -->
 <div class="pure-g pure-u-1">
@@ -354,7 +418,7 @@ aria-label="Chat on WhatsApp">
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 
-    // Render KaTeX expressions
+    // Render KaTeX expressions if present
     if(typeof renderMathInElement === "function"){
         renderMathInElement(document.body, {
             delimiters: [
