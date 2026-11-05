@@ -30,7 +30,6 @@ gtag('config', 'AW-17701066141');
 </script>
 
 <style>
-/* Matching Lists */
 .q73-matching-lists{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -41,7 +40,6 @@ margin:22px 0;
 .q73-matching-column h3{
 text-align:center;
 margin:0 0 16px;
-font-size:17px;
 }
 
 .q73-matching-column h3 span{
@@ -59,19 +57,18 @@ margin-bottom:15px;
 line-height:1.55;
 }
 
-/* Independent Matching Code Table */
+/* Independent code table styling */
 .q73-code-wrap{
 width:100%;
 overflow-x:auto;
-margin:18px 0 25px;
+margin:18px 0 22px;
 -webkit-overflow-scrolling:touch;
 }
 
 .q73-code-table{
 width:100%;
-min-width:320px;
+min-width:300px;
 border-collapse:collapse;
-border:1px solid #888;
 table-layout:fixed;
 text-align:center;
 background:#fff;
@@ -80,7 +77,7 @@ background:#fff;
 .q73-code-table th,
 .q73-code-table td{
 border:1px solid #888;
-padding:12px 8px;
+padding:11px 8px;
 text-align:center;
 vertical-align:middle;
 font-size:15px;
@@ -96,25 +93,6 @@ font-weight:700;
 .q73-code-table td:first-child{
 width:22%;
 font-weight:700;
-}
-
-.q73-code-table tbody tr.q73-code-option{
-cursor:pointer;
-transition:background .15s ease;
-}
-
-.q73-code-table tbody tr.q73-code-option:nth-child(even){
-background:#fafafa;
-}
-
-.q73-code-table tbody tr.q73-code-option:hover{
-background:#edf4fc;
-}
-
-.q73-code-table tbody tr.q73-code-option.selected{
-background:#e6f1ff;
-outline:2px solid #1769aa;
-outline-offset:-2px;
 }
 
 /* Navigation */
@@ -155,7 +133,7 @@ gap:10px;
 
 .q73-code-table th,
 .q73-code-table td{
-padding:10px 6px;
+padding:9px 6px;
 font-size:14px;
 }
 
@@ -294,9 +272,7 @@ List-II
 <h3>Code:</h3>
 
 <div class="q73-code-wrap">
-
 <table class="q73-code-table">
-
 <thead>
 <tr>
 <th>Option</th>
@@ -308,8 +284,7 @@ List-II
 </thead>
 
 <tbody>
-
-<tr class="q73-code-option" data-option="a">
+<tr>
 <td>(a)</td>
 <td>1</td>
 <td>4</td>
@@ -317,7 +292,7 @@ List-II
 <td>3</td>
 </tr>
 
-<tr class="q73-code-option" data-option="b">
+<tr>
 <td>(b)</td>
 <td>1</td>
 <td>2</td>
@@ -325,7 +300,7 @@ List-II
 <td>3</td>
 </tr>
 
-<tr class="q73-code-option" data-option="c">
+<tr>
 <td>(c)</td>
 <td>3</td>
 <td>4</td>
@@ -333,17 +308,44 @@ List-II
 <td>1</td>
 </tr>
 
-<tr class="q73-code-option" data-option="d">
+<tr>
 <td>(d)</td>
 <td>3</td>
 <td>2</td>
 <td>4</td>
 <td>1</td>
 </tr>
-
 </tbody>
 </table>
+</div>
 
+<!-- Selectable Answer Options -->
+<h3>Select the correct code:</h3>
+
+<div class="options">
+<ul class="options-list">
+
+<li class="option" data-option="a">
+<strong>(a)</strong>
+<span>A-1, B-4, C-2, D-3</span>
+</li>
+
+<li class="option" data-option="b">
+<strong>(b)</strong>
+<span>A-1, B-2, C-4, D-3</span>
+</li>
+
+<li class="option" data-option="c">
+<strong>(c)</strong>
+<span>A-3, B-4, C-2, D-1</span>
+</li>
+
+<li class="option" data-option="d">
+<strong>(d)</strong>
+<span>A-3, B-2, C-4, D-1</span>
+</li>
+
+</ul>
 </div>
 
 <!-- Previous / Next Navigation -->
@@ -423,39 +425,58 @@ aria-label="Chat on WhatsApp">
 <script>
 document.addEventListener("DOMContentLoaded",function(){
 
-const card=document.querySelector(".card");
-const options=document.querySelectorAll(".q73-code-option");
-const answer=card.querySelector(".answer-section");
-const answerBtn=card.querySelector(".view-answer-btn");
+/* Clickable MCQ Options */
+document.querySelectorAll(".card").forEach(function(card){
 
-/* Matching table option selection */
-options.forEach(function(option){
+const correct=card.getAttribute("data-correct");
+const opts=card.querySelectorAll(".options-list .option");
+const ans=card.querySelector(".answer-section");
+const btn=card.querySelector(".view-answer-btn");
 
-option.addEventListener("click",function(){
+opts.forEach(function(opt){
+
+opt.addEventListener("click",function(){
 
 if(card.classList.contains("answered"))return;
 
 card.classList.add("answered");
 
-options.forEach(function(item){
+const selected=this.getAttribute("data-option");
+
+opts.forEach(function(item){
+
 item.style.pointerEvents="none";
-item.classList.remove("selected");
-});
 
-this.classList.add("selected");
-
-});
+if(correct && item.getAttribute("data-option")===correct){
+item.classList.add("correct");
+}
 
 });
 
-/* Answer panel */
-if(answerBtn&&answer){
+if(correct && selected!==correct){
+this.classList.add("incorrect");
+}
 
-answerBtn.addEventListener("click",function(){
+if(ans){
+ans.classList.add("show");
+}
 
-answer.classList.toggle("show");
+if(btn){
+btn.innerHTML='<i class="fa-regular fa-eye-slash"></i> Hide Answer';
+}
 
-answerBtn.innerHTML=answer.classList.contains("show")
+});
+
+});
+
+/* Answer Panel */
+if(btn && ans){
+
+btn.addEventListener("click",function(){
+
+ans.classList.toggle("show");
+
+btn.innerHTML=ans.classList.contains("show")
 ? '<i class="fa-regular fa-eye-slash"></i> Hide Answer'
 : '<i class="fa-regular fa-eye"></i> View Answer';
 
@@ -463,11 +484,13 @@ answerBtn.innerHTML=answer.classList.contains("show")
 
 }
 
-/* Mobile navigation */
+});
+
+/* Mobile Navigation */
 const toggle=document.getElementById("menu-toggle");
 const nav=document.getElementById("nav-links");
 
-if(toggle&&nav){
+if(toggle && nav){
 
 toggle.addEventListener("click",function(){
 
