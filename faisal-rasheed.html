@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f4f8ff">
+<title>Faisal Rasheed | Social Media Manager</title>
+<meta name="description" content="Faisal Rasheed — Social Media Manager and Educational Video Production Specialist with 12 years of experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --navy:#183b3a; --blue:#287a70; --blue2:#5da99a; --sky:#edf5f1;
+  --ink:#243735; --muted:#6d7e78; --line:#e2eae4; --white:#fff;
+  --gold:#bd8750; --shadow:0 18px 50px rgba(31,66,57,.09);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f4f6f1;color:var(--ink);font-family:"DM Sans",sans-serif;-webkit-font-smoothing:antialiased}
+button,input{font:inherit}
+.page{width:min(1180px,calc(100% - 34px));margin:34px auto 55px}
+.sheet{position:relative;overflow:hidden;background:#fff;border:1px solid #e7edf4;border-radius:24px;box-shadow:var(--shadow)}
+.sheet:before{content:"";position:absolute;inset:0 0 auto;height:360px;background:radial-gradient(ellipse at 3% 0%,rgba(45,143,216,.16),transparent 44%),radial-gradient(ellipse at 100% 10%,rgba(23,105,176,.09),transparent 36%);pointer-events:none}
+.hero{position:relative;display:grid;grid-template-columns:220px 1fr 175px;gap:30px;align-items:center;padding:52px 54px 38px}
+.photo-wrap{position:relative;width:194px;height:194px;border-radius:50%;padding:7px;background:linear-gradient(145deg,#69a99a,#245b53);box-shadow:0 13px 30px rgba(23,105,176,.2)}
+.photo-inner{width:100%;height:100%;overflow:hidden;border:5px solid white;border-radius:50%;background:linear-gradient(145deg,#edf4ee,#d5e5dc);display:grid;place-items:center}
+.photo-inner img{width:100%;height:100%;object-fit:cover;display:none}
+.photo-placeholder{display:flex;flex-direction:column;align-items:center;gap:8px;color:#718d82;text-align:center}
+.photo-placeholder i{font-size:56px}
+.photo-placeholder span{font-size:11px;font-weight:800;letter-spacing:.5px}
+
+
+#photoInput{display:none}
+.identity{min-width:0}
+.eyebrow{margin:0 0 10px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase}
+.name{margin:0;color:#102b4e;font-family:Manrope,sans-serif;font-size:clamp(36px,5vw,58px);font-weight:800;line-height:1.04;letter-spacing:-2.5px}
+.role{display:inline-flex;align-items:center;gap:10px;margin:15px 0 9px;color:var(--blue);font-size:14px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.role:before,.role:after{content:"";height:2px;width:28px;background:#80b7e4}
+.speciality{display:inline-block;margin:0;padding:9px 15px;border-radius:30px;background:#edf5f1;color:#365c51;font-family:Manrope,sans-serif;font-size:15px;font-weight:700}
+.experience{justify-self:end;text-align:center;min-width:145px;padding:17px 12px;border-left:1px solid #dce6f0}
+.experience .number{display:block;color:var(--navy);font-family:Manrope,sans-serif;font-size:54px;font-weight:800;line-height:1}
+.experience .plus{color:var(--gold)}
+.experience .label{display:block;margin-top:8px;color:#49617b;font-size:13px;font-weight:800;line-height:1.4}
+.intro{position:relative;margin:0 54px 38px;padding:17px 22px 17px 24px;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;background:linear-gradient(90deg,#f0f6f1,#fbfcf8);color:#435b52;font-size:15px;line-height:1.85}
+.intro strong{color:#31584f}
+.content{position:relative;padding:0 42px 38px;display:grid;grid-template-columns:340px 1fr;gap:22px}
+.column{display:flex;flex-direction:column;gap:20px;min-width:0}
+.panel{background:#fff;border:1px solid var(--line);border-radius:17px;padding:21px 22px;box-shadow:0 8px 25px rgba(24,59,94,.045)}
+.panel-heading{display:flex;align-items:center;gap:11px;margin:0 0 17px;color:var(--navy);font-family:Manrope,sans-serif;font-size:17px;font-weight:800}
+.panel-heading .heading-icon{width:35px;height:35px;display:grid;place-items:center;border-radius:10px;background:#eaf3ed;color:var(--blue);font-size:15px}
+.expertise-list{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+.expertise-list li{display:flex;align-items:flex-start;gap:11px;font-size:13px;font-weight:700;line-height:1.45;color:#30453f}
+.check{flex:0 0 19px;width:19px;height:19px;border-radius:5px;display:grid;place-items:center;background:linear-gradient(145deg,#278bd2,#125a9c);color:#fff;font-size:10px;margin-top:0px}
+.skill-note{margin:16px 0 0;padding-top:13px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);line-height:1.6}
+.right-stack{display:flex;flex-direction:column;gap:20px}
+.tools-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.tool{min-height:103px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 7px;border-right:1px solid var(--line)}
+.tool:nth-child(4n){border-right:0}
+.tool i{font-size:27px;color:var(--blue);margin-bottom:9px}
+.tool strong{font-size:11px;line-height:1.4;color:#304840}
+.tool small{display:block;color:var(--muted);font-size:10px;margin-top:2px}
+.services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.service{min-height:105px;padding:13px 9px;border:1px solid #e8eee7;border-radius:12px;background:#fbfcf9;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+.service i{font-size:23px;color:var(--blue)}
+.service span{font-size:11px;font-weight:700;line-height:1.4;color:#40574f}
+.skill-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.skill{padding:8px 11px;border-radius:8px;background:#eff4ef;border:1px solid #e0e9df;color:#426459;font-size:11px;font-weight:700}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.process-item{padding:12px 11px;border-radius:11px;background:#f0f5ef}
+.process-item b{display:block;margin-bottom:5px;color:#31584f;font-family:Manrope,sans-serif;font-size:12px}
+.process-item span{display:block;color:var(--muted);font-size:10px;line-height:1.55}
+.highlights{position:relative;margin:0 28px 28px;padding:20px 22px;border-radius:17px;background:linear-gradient(105deg,#347f72,#183f3b);color:#fff;display:grid;grid-template-columns:repeat(6,1fr);align-items:center;gap:8px}
+.highlight{display:flex;align-items:center;justify-content:center;gap:9px;padding:4px 8px;border-right:1px solid rgba(255,255,255,.2);min-height:54px}
+.highlight:last-child{border:0}
+.highlight i{font-size:23px;color:#d9edff}
+.highlight span{font-size:10px;font-weight:700;line-height:1.45}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:0 42px 38px;padding:20px 23px;border:1px solid #dce8dd;border-radius:15px;background:linear-gradient(100deg,#eef5ef,#fbfcf8)}
+.contact h2{margin:0 0 5px;color:var(--navy);font:800 17px Manrope,sans-serif}
+.contact p{margin:0;color:var(--muted);font-size:12px;line-height:1.6}
+.contact-btn{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;border-radius:9px;background:var(--blue);color:#fff;text-decoration:none;font-size:12px;font-weight:800;white-space:nowrap}
+.contact-btn:hover{background:#205e55}
+@media(max-width:900px){
+ .hero{grid-template-columns:170px 1fr;gap:24px;padding:38px 34px 28px}
+ .photo-wrap{width:160px;height:160px}
+ .experience{grid-column:1/-1;justify-self:start;display:flex;align-items:center;gap:12px;text-align:left;padding:0;border:0}
+ .experience .number{font-size:36px}
+ .experience .label{margin:0}
+ .intro{margin:0 34px 28px}
+ .content{padding:0 28px 28px;grid-template-columns:280px 1fr}
+ .tools-grid{grid-template-columns:repeat(3,1fr)}
+ .tool:nth-child(4n){border-right:1px solid var(--line)}
+ .tool:nth-child(3n){border-right:0}
+ .services-grid{grid-template-columns:repeat(3,1fr)}
+ .highlights{grid-template-columns:repeat(3,1fr)}
+ .highlight:nth-child(3){border-right:0}
+ .contact{margin:0 28px 28px}
+}
+@media(max-width:620px){
+ .page{width:calc(100% - 18px);margin:10px auto 20px}
+ .sheet{border-radius:17px}
+ .hero{grid-template-columns:1fr;justify-items:center;text-align:center;padding:30px 20px 22px;gap:17px}
+ .photo-wrap{width:150px;height:150px}
+ .name{font-size:39px;letter-spacing:-1.6px}
+ .role{font-size:11px;letter-spacing:1.4px}
+ .role:before,.role:after{width:17px}
+ .speciality{font-size:12px}
+ .experience{justify-self:center}
+ .intro{margin:0 18px 22px;padding:14px 15px;font-size:13px}
+ .content{display:flex;flex-direction:column;padding:0 13px 20px;gap:14px}
+ .column,.right-stack{gap:14px}
+ .panel{padding:17px 15px;border-radius:14px}
+ .panel-heading{font-size:15px}
+ .tools-grid{grid-template-columns:repeat(2,1fr)}
+ .tool:nth-child(3n){border-right:1px solid var(--line)}
+ .tool:nth-child(2n){border-right:0}
+ .services-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+ .service{min-height:95px}
+ .process{grid-template-columns:repeat(2,1fr)}
+ .highlights{margin:0 13px 18px;padding:15px 10px;grid-template-columns:repeat(2,1fr);gap:7px}
+ .highlight{justify-content:flex-start;border-right:0;border-bottom:1px solid rgba(255,255,255,.17);padding:9px}
+ .highlight:nth-last-child(-n+2){border-bottom:0}
+ .contact{margin:0 13px 20px;align-items:flex-start;flex-direction:column;padding:17px}.contact-details{flex-direction:column;gap:8px}
+}
+@media print{
+ body{background:#fff}
+ .page{width:100%;margin:0}
+ .sheet{border:0;border-radius:0;box-shadow:none}
+ .contact-btn{display:none}
+ .panel,.service,.highlights,.contact{break-inside:avoid}
+}
+
+.contact-copy{min-width:0}
+.contact h2 i{color:var(--blue);font-size:15px;margin-right:7px}
+.contact-details{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:12px}
+.contact-details a{display:inline-flex;align-items:center;gap:8px;color:#31584f;text-decoration:none;font-size:12px;font-weight:700}
+.contact-details a i{color:var(--blue)}
+.contact-details a:hover{color:#183b3a;text-decoration:underline}
+
+</style>
+<!-- Google Ads Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701066141"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17701066141');
+</script>
+
+</head>
+<body>
+<main class="page">
+ <article class="sheet">
+  <section class="hero">
+   <div class="photo-wrap">
+    <div class="photo-inner">
+     <img id="profilePhoto" src="profile_photo.jpg" alt="Faisal Rasheed profile photograph" style="display:block">
+     <div class="photo-placeholder" id="photoPlaceholder" style="display:none">
+      <i class="fa-solid fa-user"></i>
+      <span>YOUR PHOTO</span>
+     </div>
+    </div>
+   </div>
+
+   <div class="identity">
+    <p class="eyebrow">Professional Profile</p>
+    <h1 class="name">Faisal Rasheed</h1>
+    <div class="role">Social Media Manager</div><br>
+    <p class="speciality">Educational Video Production Specialist</p>
+   </div>
+
+   <div class="experience">
+    <span class="number">12<span class="plus">+</span></span>
+    <span class="label">Years of<br>Experience</span>
+   </div>
+  </section>
+
+  <p class="intro">
+   A results-driven <strong>Social Media Manager</strong> with <strong>12 years of experience</strong> in managing educational channels, producing high-quality learning videos, and delivering end-to-end digital content solutions for educators, institutions and online platforms. Combining content strategy, creative production and practical technology to build a consistent and engaging digital presence.
+  </p>
+
+  <section class="content">
+   <aside class="column">
+    <div class="panel">
+     <h2 class="panel-heading"><span class="heading-icon"><i class="fa-solid fa-bullseye"></i></span>Core Expertise</h2>
+     <ul class="expertise-list">
+      <li><span class="check"><i class="fa-solid fa-check"></i></span>Social Media Management</li>
+      <li><span class="check"><i class="fa-solid fa-check"></i></span>Educational Video Production</li>
+      <li><span class="check"><i class="fa-solid fa-check"></i></span>YouTube Channel Management</li>
+      <li><span class="check"><i class="fa-solid fa-check"></i></span>Video Editing & Post-Production</li>
+      <li><span class="check"><i class="fa-solid fa-check"></i></span>Content Planning & Strategy</li>
+      <li><span class="check"><i class="fa-solid fa-check"></i></span>Thumbnail & Graphic Design</li>
+      <li><span class="check"><i class="fa-solid fa-check"></i></span>Online Course Content Support</li>
+      <li><span class="check"><i class="fa-solid fa-check"></i></span>Digital Branding for Educators</li>
+     </ul>
+     <p class="skill-note">A complete content workflow — from planning and production to publishing, optimisation and performance review.</p>
+    </div>
+    <div class="panel">
+     <h2 class="panel-heading"><span class="heading-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>Additional Skills</h2>
+     <div class="skill-cloud">
+      <span class="skill">YouTube SEO</span><span class="skill">Content Calendar</span>
+      <span class="skill">Audience Engagement</span><span class="skill">Captions & Subtitles</span>
+      <span class="skill">Reels & Shorts</span><span class="skill">Presentation Design</span>
+      <span class="skill">Digital Asset Management</span><span class="skill">Analytics & Reporting</span>
+      <span class="skill">Brand Consistency</span><span class="skill">Workflow Coordination</span>
+     </div>
+    </div>
+   </aside>
+
+   <div class="right-stack">
+    <section class="panel">
+     <h2 class="panel-heading"><span class="heading-icon"><i class="fa-solid fa-laptop-code"></i></span>Software & Tools</h2>
+     <div class="tools-grid">
+      <div class="tool"><i class="fa-brands fa-google"></i><strong>Google Workspace</strong><small>Docs · Sheets · Slides</small></div>
+      <div class="tool"><i class="fa-solid fa-layer-group"></i><strong>Adobe Creative Suite</strong><small>Photoshop · Premiere</small></div>
+      <div class="tool"><i class="fa-solid fa-circle-play"></i><strong>OBS Studio</strong><small>Recording · Streaming</small></div>
+      <div class="tool"><i class="fa-brands fa-microsoft"></i><strong>MS Office</strong><small>Word · Excel · PowerPoint</small></div>
+      <div class="tool"><i class="fa-solid fa-film"></i><strong>Video Editing</strong><small>Long & short form</small></div>
+      <div class="tool"><i class="fa-solid fa-wand-magic-sparkles"></i><strong>Motion Graphics</strong><small>Titles · Animations</small></div>
+      <div class="tool"><i class="fa-solid fa-image"></i><strong>Graphic Design</strong><small>Thumbnails · Creatives</small></div>
+      <div class="tool"><i class="fa-solid fa-code"></i><strong>Web Technologies</strong><small>HTML · CSS · JavaScript</small></div>
+     </div>
+    </section>
+
+    <section class="panel">
+     <h2 class="panel-heading"><span class="heading-icon"><i class="fa-solid fa-layer-group"></i></span>Services I Offer</h2>
+     <div class="services-grid">
+      <div class="service"><i class="fa-solid fa-display"></i><span>Educational Video Creation</span></div>
+      <div class="service"><i class="fa-solid fa-bullhorn"></i><span>Social Media Management</span></div>
+      <div class="service"><i class="fa-brands fa-youtube"></i><span>YouTube Setup & Growth</span></div>
+      <div class="service"><i class="fa-solid fa-images"></i><span>Thumbnail Design</span></div>
+      <div class="service"><i class="fa-solid fa-person-chalkboard"></i><span>Presentation & e-Content</span></div>
+      <div class="service"><i class="fa-solid fa-file-video"></i><span>Content Editing & QA</span></div>
+      <div class="service"><i class="fa-solid fa-chart-line"></i><span>SEO & Analytics</span></div>
+      <div class="service"><i class="fa-solid fa-calendar-days"></i><span>Scheduling & Publishing</span></div>
+     </div>
+    </section>
+
+    <section class="panel">
+     <h2 class="panel-heading"><span class="heading-icon"><i class="fa-solid fa-diagram-project"></i></span>My Content Workflow</h2>
+     <div class="process">
+      <div class="process-item"><b>01 · Plan</b><span>Audience research, goals, content calendar and topics.</span></div>
+      <div class="process-item"><b>02 · Create</b><span>Recording, editing, design and creative production.</span></div>
+      <div class="process-item"><b>03 · Publish</b><span>Captions, thumbnails, metadata and scheduling.</span></div>
+      <div class="process-item"><b>04 · Improve</b><span>Performance review, insights and optimisation.</span></div>
+     </div>
+    </section>
+   </div>
+  </section>
+
+  <section class="highlights">
+   <div class="highlight"><i class="fa-solid fa-award"></i><span>12+ Years<br>Experience</span></div>
+   <div class="highlight"><i class="fa-solid fa-graduation-cap"></i><span>Educational<br>Domain Focus</span></div>
+   <div class="highlight"><i class="fa-solid fa-users"></i><span>Channel Growth<br>& Engagement</span></div>
+   <div class="highlight"><i class="fa-solid fa-bullseye"></i><span>Quality & Timely<br>Delivery</span></div>
+   <div class="highlight"><i class="fa-solid fa-handshake"></i><span>Reliable &<br>Collaborative</span></div>
+   <div class="highlight"><i class="fa-solid fa-lightbulb"></i><span>Creative, Technical<br>& Strategic</span></div>
+  </section>
+
+  <section class="contact">
+   <div class="contact-copy">
+    <h2><i class="fa-solid fa-paper-plane"></i> Let's build a stronger digital presence.</h2>
+    <p>Available for social media management, educational video production, video editing and digital content support.</p>
+    <div class="contact-details">
+     <a href="mailto:faisalrasheed.freelancer@gmail.com"><i class="fa-solid fa-envelope"></i> faisalrasheed.freelancer@gmail.com</a>
+     <a href="tel:+919569914600"><i class="fa-solid fa-phone"></i> +91-9569914600</a>
+    </div>
+   </div>
+   <a class="contact-btn" href="mailto:faisalrasheed.freelancer@gmail.com"><i class="fa-solid fa-envelope"></i> Contact for Work</a>
+  </section>
+ </article>
+</main>
+<script>
+const defaultPhoto = document.getElementById("profilePhoto");
+defaultPhoto.addEventListener("error", function () {
+  defaultPhoto.style.display = "none";
+  document.getElementById("photoPlaceholder").style.display = "flex";
+});
+</script>
+</body>
+</html>
