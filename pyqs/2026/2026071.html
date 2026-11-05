@@ -18,7 +18,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 
 <script defer src="../../scripts/pdf-generator.js"></script>
 
@@ -32,6 +31,23 @@ gtag('config', 'AW-17701066141');
 </script>
 
 <style>
+.question-statements {
+    margin: 18px 0;
+}
+
+.direction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.direction-item {
+    display: grid;
+    grid-template-columns: 35px minmax(0, 1fr);
+    gap: 8px;
+    line-height: 1.6;
+}
+
 .question-navigation {
     display: flex;
     justify-content: space-between;
@@ -59,23 +75,6 @@ gtag('config', 'AW-17701066141');
 .question-nav-btn:hover {
     background: #0d4f85;
     color: #fff;
-}
-
-.question-statements {
-    margin: 18px 0;
-}
-
-.direction-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.direction-item {
-    display: grid;
-    grid-template-columns: 28px minmax(0, 1fr);
-    gap: 8px;
-    line-height: 1.6;
 }
 
 @media(max-width:480px) {
@@ -127,59 +126,45 @@ gtag('config', 'AW-17701066141');
 
 <div class="questionBody">
 
-<!-- Question Header -->
 <div class="question__header">
-
 <h2 class="question_heading">Question 71</h2>
 
 <button type="button" class="share-btn" onclick="shareQuestion(this)">
 <i class="fa-solid fa-share-nodes"></i>
 <span>Share</span>
 </button>
-
 </div>
 
-<!-- Question Statement -->
 <h1 class="questionBody tag-h1">
-<strong> Consider the following three statements, namely S1, S2 and S3: </strong>
+Consider the following three statements, namely S1, S2 and S3:
 </h1>
 
-<!-- Numbered Statements -->
 <div class="question-statements">
-
 <div class="direction-list">
 
 <div class="direction-item">
 <strong>S1.</strong>
-<span>
-Protecting the environment is an existential exigency for humans, given the impact of environmental degradation on climate change.
-</span>
+<span>Protecting the environment is an existential exigency for humans, given the impact of environmental degradation on climate change.</span>
 </div>
 
 <div class="direction-item">
 <strong>S2.</strong>
-<span>
-Scientific consensus has not been achieved with regard to the extent of the contribution of human intervention to climate change.
-</span>
+<span>Scientific consensus has not been achieved with regard to the extent of the contribution of human intervention to climate change.</span>
 </div>
 
 <div class="direction-item">
 <strong>S3.</strong>
-<span>
-Environmental activism includes climate alarmism and other extremist points of view that often become the focus of climate change deniers.
-</span>
+<span>Environmental activism includes climate alarmism and other extremist points of view that often become the focus of climate change deniers.</span>
 </div>
 
 </div>
 </div>
 
 <h1 class="questionBody tag-h1">
-<strong> Which of the following relationships based on the statements given above is/are correct?</strong>
+Which of the following relationships based on the statements given above is/are correct?
 </h1>
 
-<!-- Numbered Relationships -->
 <div class="question-statements">
-
 <div class="direction-list">
 
 <div class="direction-item">
@@ -201,12 +186,10 @@ Environmental activism includes climate alarmism and other extremist points of v
 </div>
 
 <h1 class="questionBody tag-h1">
-<strong> Select the answer using the code given below.</strong>
+Select the answer using the code given below.
 </h1>
 
-<!-- Answer Options -->
 <div class="options">
-
 <ul class="options-list">
 
 <li class="option" data-option="a">
@@ -230,12 +213,23 @@ Environmental activism includes climate alarmism and other extremist points of v
 </li>
 
 </ul>
-
 </div>
+
+<!-- Previous / Next Navigation -->
+<nav class="question-navigation" aria-label="Question Navigation">
+<a href="2026070.html" class="question-nav-btn" id="prevQuestion">
+<i class="fa-solid fa-arrow-left"></i>
+<span>Previous</span>
+</a>
+
+<a href="2026072.html" class="question-nav-btn" id="nextQuestion">
+<span>Next</span>
+<i class="fa-solid fa-arrow-right"></i>
+</a>
+</nav>
 
 <!-- Practice / Download Box -->
 <div class="pure-g pure-u-1">
-
 <div class="pyp-box pure-g">
 
 <div>
@@ -244,7 +238,6 @@ Environmental activism includes climate alarmism and other extremist points of v
 </div>
 
 <div class="pyp-bottom-bar">
-
 <div class="pyp-left-buttons">
 
 <a href="#" target="_blank" class="attempt-test-link">
@@ -252,14 +245,12 @@ Attempt Online
 </a>
 
 <button type="button" class="solpdf-download-link active" onclick="downloadQuestionPDF(this)">
-
 <svg width="12" height="12" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <g fill-rule="evenodd">
 <path d="M10 14c.3 0 .5-.1.7-.3L16.4 8 15 6.6l-4 4V2H9v8.6l-4-4L3.6 8l5.7 5.7c.2.2.4.3.7.3z"></path>
 <path d="M16 16H4v-3H2v4c0 .6.4 1 1 1h14c.6 0 1-.4 1-1v-4h-2v3z"></path>
 </g>
 </svg>
-
 Download Solution PDF
 </button>
 
@@ -268,12 +259,11 @@ Download Solution PDF
 <button type="button" class="view-answer-btn">
 <i class="fa-regular fa-eye"></i> View Answer
 </button>
-
-</div>
-</div>
 </div>
 
-<!-- Answer Section -->
+</div>
+</div>
+
 <div class="answer-section">
 <strong>Answer Explanation:</strong>
 </div>
@@ -292,7 +282,6 @@ aria-label="Chat on WhatsApp">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<!-- Footer -->
 <footer>
 © 2027 Kusum Maths Classes · Developed by
 <a href="../../faisal-rasheed.html">Faisal Rasheed</a>
@@ -301,7 +290,6 @@ aria-label="Chat on WhatsApp">
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 
-    // Answer and option interaction
     document.querySelectorAll(".card").forEach(function(card){
 
         const correct = card.getAttribute("data-correct");
@@ -310,21 +298,16 @@ document.addEventListener("DOMContentLoaded", function(){
         const btn = card.querySelector(".view-answer-btn");
 
         if(btn && ans){
-
             btn.addEventListener("click", function(){
-
                 ans.classList.toggle("show");
 
                 btn.innerHTML = ans.classList.contains("show")
                     ? '<i class="fa-regular fa-eye-slash"></i> Hide Answer'
                     : '<i class="fa-regular fa-eye"></i> View Answer';
-
             });
-
         }
 
         opts.forEach(function(opt){
-
             opt.addEventListener("click", function(){
 
                 if(card.classList.contains("answered")) return;
@@ -334,81 +317,58 @@ document.addEventListener("DOMContentLoaded", function(){
                 const selected = this.getAttribute("data-option");
 
                 opts.forEach(function(item){
-
                     item.style.pointerEvents = "none";
 
                     if(correct && item.getAttribute("data-option") === correct){
                         item.classList.add("correct");
                     }
-
                 });
 
                 if(correct && selected !== correct){
                     this.classList.add("incorrect");
                 }
 
-                if(ans){
-                    ans.classList.add("show");
-                }
+                if(ans) ans.classList.add("show");
 
                 if(btn){
                     btn.innerHTML = '<i class="fa-regular fa-eye-slash"></i> Hide Answer';
                 }
-
             });
-
         });
-
     });
 
-    // Mobile navigation
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-links");
 
     if(toggle && nav){
-
         toggle.addEventListener("click", function(){
-
             const open = nav.classList.toggle("active");
-
             toggle.setAttribute("aria-expanded", String(open));
 
             toggle.innerHTML = open
                 ? '<i class="fa-solid fa-xmark"></i>'
                 : '<i class="fa-solid fa-bars"></i>';
-
         });
-
     }
-
 });
 
-// Share Question
 function shareQuestion(button){
 
     const heading = button.closest(".card").querySelector(".question_heading");
-
     const title = heading.textContent.trim() + " | Kusum Maths Classes";
 
     if(navigator.share){
-
         navigator.share({
             title: title,
             url: location.href
         }).catch(function(){});
-
     }else if(navigator.clipboard){
-
         navigator.clipboard.writeText(location.href).then(function(){
             alert("Link copied to clipboard!");
         });
-
     }else{
-
         prompt("Copy this page link:", location.href);
-
     }
-
 }
 </script>
 
