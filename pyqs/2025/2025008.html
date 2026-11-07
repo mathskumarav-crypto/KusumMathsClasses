@@ -46,22 +46,10 @@ gtag('config', 'AW-17701066141');
   "name": "What comes at X and Y respectively in the following sequence?",
   "text": "What comes at X and Y respectively in the following sequence? January, January, December, October, X, March, October, Y, September.",
   "suggestedAnswer": [
-    {
-      "@type": "Answer",
-      "text": "Option (a): July, May."
-    },
-    {
-      "@type": "Answer",
-      "text": "Option (b): July, April."
-    },
-    {
-      "@type": "Answer",
-      "text": "Option (c): June, May."
-    },
-    {
-      "@type": "Answer",
-      "text": "Option (d): June, April."
-    }
+    {"@type": "Answer", "text": "Option (a): July, May."},
+    {"@type": "Answer", "text": "Option (b): July, April."},
+    {"@type": "Answer", "text": "Option (c): June, May."},
+    {"@type": "Answer", "text": "Option (d): June, April."}
   ]
 }
 </script>
@@ -70,6 +58,7 @@ gtag('config', 'AW-17701066141');
 .question-navigation{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0;padding:14px 0;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;}
 .question-nav-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;background:#1769aa;color:#fff;text-decoration:none;border-radius:7px;font-size:14px;font-weight:700;}
 .question-nav-btn:hover{background:#0d4f85;color:#fff;}
+.question-nav-btn.disabled{background:#9ca3af;cursor:not-allowed;pointer-events:none;opacity:.65;}
 .questionBody.tag-h1{font-weight:400;text-align:justify;}
 @media(max-width:480px){.question-nav-btn{padding:9px 11px;font-size:12px;}}
 </style>
@@ -121,10 +110,10 @@ gtag('config', 'AW-17701066141');
 </button>
 </div>
 
-<p class="questionBody">What comes at X and Y respectively in the following sequence?</p>
+<p class="questionBody">What comes at \(X\) and \(Y\) respectively in the following sequence?</p>
 
 <p class="questionBody">
-January, January, December, October, X, March, October, Y, September
+January, January, December, October, \(X\), March, October, \(Y\), September
 </p>
 
 <div class="options">
@@ -189,11 +178,23 @@ throwOnError:false
 });
 }
 
-const match=location.pathname.split("/").pop().match(/^question-(\d{3})\.html$/i);
+const filename=location.pathname.split("/").pop();
+const match=filename.match(/^question-(\d{3})\.html$/i);
+
 if(match){
 const number=parseInt(match[1],10);
-document.getElementById("prevQuestion").href="question-"+String(number-1).padStart(3,"0")+".html";
-document.getElementById("nextQuestion").href="question-"+String(number+1).padStart(3,"0")+".html";
+const previous=document.getElementById("prevQuestion");
+const next=document.getElementById("nextQuestion");
+
+if(number>1){
+previous.href="question-"+String(number-1).padStart(3,"0")+".html";
+}else{
+previous.removeAttribute("href");
+previous.classList.add("disabled");
+previous.setAttribute("aria-disabled","true");
+}
+
+next.href="question-"+String(number+1).padStart(3,"0")+".html";
 }
 
 document.querySelectorAll(".option").forEach(function(option){
