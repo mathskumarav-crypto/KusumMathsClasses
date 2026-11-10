@@ -252,16 +252,22 @@ aria-label="Contact on WhatsApp">
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 
-/* KaTeX rendering */
+/* KaTeX rendering in question AND options */
 if(typeof renderMathInElement === "function"){
-renderMathInElement(document.querySelector(".questionBody"),{
+
+const mathSettings = {
 delimiters:[
 {left:"\\(",right:"\\)",display:false},
 {left:"\\[",right:"\\]",display:true},
 {left:"$$",right:"$$",display:true}
 ],
 throwOnError:false
+};
+
+document.querySelectorAll(".questionBody, .options-list").forEach(function(element){
+renderMathInElement(element, mathSettings);
 });
+
 }
 
 /* Automatic Previous and Next Navigation */
