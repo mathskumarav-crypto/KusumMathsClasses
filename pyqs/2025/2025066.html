@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
 
-<title>UPSC CSAT 2025 Question 66: Coding Decoding | Kusum Maths Classes</title>
+<title>UPSC CSAT 2025 Question 66: Coding and Decoding | Kusum Maths Classes</title>
 <meta name="description" content="Practice UPSC CSAT 2025 Question 66 on coding and decoding. Test your logical reasoning and numerical pattern recognition skills.">
 <link rel="canonical" href="https://kusummaths.com/pyqs/2025/2025066.html">
 
@@ -60,6 +60,7 @@
 
 <header>
 <div class="container navbar">
+
 <a class="logo" href="../../index.html">
 <img src="../../logo.png" alt="Kusum Maths Classes Logo" class="logo-img">
 <span>KUSUM MATHS CLASSES<small>LEARN · PRACTISE · SUCCEED</small></span>
@@ -75,6 +76,7 @@
 <a href="../../study-material.html">Study Material</a>
 <a href="../../pyqs.html">PYQs</a>
 </nav>
+
 </div>
 </header>
 
@@ -95,9 +97,7 @@
 <h1 class="question_heading">UPSC CSAT Practice Question 66: Coding and Decoding</h1>
 
 <div class="question__header">
-<h2>
-In a certain code if \(64\) is written as \(343\) and \(216\) is written as \(729\), then how is \(512\) written in that code?
-</h2>
+<h2>In a certain code if \(64\) is written as \(343\) and \(216\) is written as \(729\), then how is \(512\) written in that code?</h2>
 
 <button type="button" class="share-btn" onclick="shareQuestion(this)" aria-label="Share this question">
 <i class="fa-solid fa-share-nodes"></i><span>Share</span>
@@ -106,21 +106,10 @@ In a certain code if \(64\) is written as \(343\) and \(216\) is written as \(72
 
 <div class="options">
 <ul class="options-list">
-<li class="option" data-option="a">
-<strong>(a)</strong><span>\(1000\)</span>
-</li>
-
-<li class="option" data-option="b">
-<strong>(b)</strong><span>\(1331\)</span>
-</li>
-
-<li class="option" data-option="c">
-<strong>(c)</strong><span>\(1728\)</span>
-</li>
-
-<li class="option" data-option="d">
-<strong>(d)</strong><span>\(2197\)</span>
-</li>
+<li class="option" data-option="a"><strong>(a)</strong><span>\(1000\)</span></li>
+<li class="option" data-option="b"><strong>(b)</strong><span>\(1331\)</span></li>
+<li class="option" data-option="c"><strong>(c)</strong><span>\(1728\)</span></li>
+<li class="option" data-option="d"><strong>(d)</strong><span>\(2197\)</span></li>
 </ul>
 </div>
 
@@ -139,7 +128,7 @@ In a certain code if \(64\) is written as \(343\) and \(216\) is written as \(72
 
 <div>
 <div class="pyp-heading">Practice question</div>
-<div class="pyp-title">UPSC CSAT — Practice Set 2025</div>
+<div class="pyp-title">UPSC CSAT — Practice Set</div>
 </div>
 
 <div class="pyp-bottom-bar">
@@ -190,10 +179,13 @@ throwOnError:false
 });
 }
 
-const match=location.pathname.split("/").pop().match(/^(\d{4})(\d{3})\.html$/i);
+/* Previous and next question navigation */
+const filename=location.pathname.split("/").pop();
+const match=filename.match(/^(\d{4})(\d{3})\.html$/i);
 
 if(match){
-const year=match[1],number=Number(match[2]);
+const year=match[1];
+const number=Number(match[2]);
 
 document.getElementById("prevQuestion").href=
 number>1?year+String(number-1).padStart(3,"0")+".html":"#";
@@ -206,6 +198,7 @@ document.getElementById("prevQuestion").style.visibility="hidden";
 }
 }
 
+/* Option selection */
 document.querySelectorAll(".option").forEach(option=>{
 option.addEventListener("click",()=>{
 document.querySelectorAll(".option").forEach(item=>{
@@ -215,6 +208,7 @@ option.classList.add("selected");
 });
 });
 
+/* Mobile navigation */
 const toggle=document.getElementById("menu-toggle");
 const nav=document.getElementById("nav-links");
 
@@ -228,6 +222,7 @@ toggle.innerHTML=open
 
 });
 
+/* Share question */
 function shareQuestion(button){
 const title=button.closest(".card").querySelector(".question_heading").textContent+" | Kusum Maths Classes";
 
