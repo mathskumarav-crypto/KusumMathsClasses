@@ -104,21 +104,21 @@
             background: rgba(40,110,220,.08);
         }
 
-        /* Keep option content in normal paragraph flow.
-           Do not separate mathematical expressions using flex or grid. */
+        /* Keep each option in normal paragraph flow */
         .options-list .option p {
-            display: block !important;
+            display: block;
             width: 100%;
             margin: 0;
             padding: 0;
-            text-align: left !important;
-            text-indent: 0;
+            text-align: left;
             white-space: normal;
             box-sizing: border-box;
         }
 
-        .options-list .option p * {
-            display: inline;
+        /* Preserve KaTeX's internal fraction layout */
+        .options-list .option .katex {
+            display: inline-block;
+            vertical-align: middle;
         }
 
         @media(max-width:480px) {
@@ -186,9 +186,7 @@
                 </div>
 
                 <p>
-                    The average of three numbers \(p\), \(q\) and \(r\) is \(k\). 
-                  \(p\) is as much more than the average as \(q\) is less than the 
-                  average. What is the value of \(r\)?
+                    The average of three numbers \(p\), \(q\) and \(r\) is \(k\). \(p\) is as much more than the average as \(q\) is less than the average. What is the value of \(r\)?
                 </p>
 
                 <ul class="options-list">
