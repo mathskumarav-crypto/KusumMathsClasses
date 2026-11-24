@@ -114,6 +114,21 @@ gtag('config', 'AW-17701066141');
         font-size:12px;
     }
 }
+
+    /* Keep KaTeX fractions and percentage signs together */
+.options-list .option .katex {
+    white-space: nowrap;
+}
+
+.options-list .option .katex-display {
+    display: inline-block;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.options-list .option span {
+    min-width: 0;
+}
 </style>
 </head>
 
@@ -181,9 +196,9 @@ gtag('config', 'AW-17701066141');
                             <span>\(10\%\)</span>
                         </li>
 
-                        <li class="option" data-option="b">
+                       <li class="option" data-option="b">
                             <strong>(b)</strong>
-                             <span>\(\dfrac{50%}{3}\)</span>
+                            <span>\(\dfrac{50}{3}\%\)</span>
                         </li>
 
                         <li class="option" data-option="c">
