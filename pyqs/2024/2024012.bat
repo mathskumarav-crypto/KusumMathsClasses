@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>UPSC CSAT 2024 Question 12 | Kusum Maths Classes</title>
+    <meta name="description" content="Practise UPSC CSAT 2024 Question 12 based on Passage 1, testing assumptions about urban planning education and modern urban professionals.">
+    <meta name="keywords" content="UPSC CSAT 2024, Question 12, Reading Comprehension, Assumptions, Urban Planning, Passage 1, CSAT English, Kusum Maths Classes">
+    <meta name="author" content="Kusum Maths Classes">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="UPSC CSAT 2024 — Question 12">
+    <meta property="og:description" content="Practise UPSC CSAT 2024 Question 12 on assumptions based on a passage about urban planning.">
+    <meta property="og:site_name" content="Kusum Maths Classes">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="UPSC CSAT 2024 Question 12 | Kusum Maths Classes">
+    <meta name="twitter:description" content="Practise UPSC CSAT 2024 Question 12.">
+
+    <link rel="canonical" href="https://kusummaths.com/pyqs/2024/2024012.html">
+    <link rel="icon" type="image/png" href="https://kusummathsclasses.com/logo.png">
+    <link rel="stylesheet" href="https://kusummathsclasses.com/pyqs/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+    <!-- PDF Generator -->
+    <script defer src="https://kusummathsclasses.com/scripts/pdf-generator.js"></script>
+
+    <!-- Google Ads Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701066141"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17701066141');
+    </script>
+
+    <style>
+        /* Question text */
+        .questionBody p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* Directions */
+        .question-directions {
+            margin: 18px 0;
+        }
+
+        .question-directions h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+
+        .question-directions p {
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        /* Passage heading */
+        .passage-heading {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 26px 0 18px;
+        }
+
+        /* Passage text */
+        .passage-text {
+            line-height: 1.75;
+            text-align: justify;
+            text-justify: inter-word;
+            margin: 0 0 24px;
+        }
+
+        /* Numbered assumptions */
+        .assumption-list {
+            margin: 12px 0 18px;
+            padding-left: 28px;
+        }
+
+        .assumption-list li {
+            padding-left: 8px;
+            margin-bottom: 10px;
+            line-height: 1.65;
+            text-align: justify;
+        }
+
+        /* Option layout */
+        .options-list .option {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            line-height: 1.6;
+        }
+
+        .options-list .option > strong {
+            flex: 0 0 34px;
+            font-weight: 500;
+        }
+
+        .options-list .option > span {
+            display: block;
+            flex: 1 1 auto;
+            min-width: 0;
+            white-space: normal;
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+
+        /* Preserve KaTeX expressions */
+        .options-list .option > span .katex {
+            display: inline-block;
+            white-space: nowrap;
+            max-width: none;
+        }
+
+        /* Selected option */
+        .options-list .option.selected {
+            outline: 2px solid var(--blue);
+            background: rgba(40, 110, 220, .08);
+        }
+
+        /* Question navigation */
+        .question-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin: 22px 0;
+            padding: 14px 0;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .question-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 7px;
+            background: #1769aa;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .question-nav-btn:hover {
+            background: #0d4f85;
+            color: #ffffff;
+        }
+
+        .question-nav-btn.disabled {
+            opacity: .5;
+            pointer-events: none;
+        }
+
+        @media (max-width: 480px) {
+            .question-nav-btn {
+                padding: 9px 11px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-strip">
+        <strong>UPSC CSAT 2024</strong> &nbsp;·&nbsp; UPSC CSAT Practice Sets
+    </div>
+
+    <header>
+        <div class="container navbar">
+
+            <a class="logo" href="https://kusummathsclasses.com/index.html">
+                <img src="https://kusummathsclasses.com/logo.png" alt="Logo" class="logo-img">
+                <span>
+                    KUSUM MATHS CLASSES
+                    <small>LEARN · PRACTISE · SUCCEED</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="https://kusummathsclasses.com/index.html">Home</a>
+                <a href="https://kusummathsclasses.com/courses.html">Courses</a>
+                <a href="https://kusummathsclasses.com/study-material.html">Study Material</a>
+                <a href="https://kusummathsclasses.com/pyqs.html">PYQs</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="content-wrap">
+        <div class="container">
+
+            <div class="card" data-correct="a">
+
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="https://kusummathsclasses.com/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://kusummathsclasses.com/courses.html">UPSC CSAT</a>
+                    </li>
+                    <li>
+                        <a href="https://kusummathsclasses.com/study-material.html">CSAT Practice</a>
+                    </li>
+                </ul>
+
+                <div class="questionBody">
+
+                    <div class="question__header">
+                        <h2 class="question_heading">
+                            UPSC CSAT 2024 — Question 12
+                        </h2>
+
+                        <button type="button" class="share-btn"
+                                onclick="shareQuestion(this)"
+                                aria-label="Share this question">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+
+                    <!-- Directions -->
+                    <div class="question-directions">
+
+                        <h3>Directions for the following 4 (four) items:</h3>
+
+                        <p>
+                            Read the following two passages and answer the items that follow the passages.
+                            Your answers to these items should be based on the passages only.
+                        </p>
+
+                    </div>
+
+                    <!-- Passage 1 -->
+                    <h3 class="passage-heading">Passage—1</h3>
+
+                    <p class="passage-text">
+                        Today, if we consider cities such as New York, London and Paris as some of the most iconic cities in the world, it is because plans carrying a heavy systems approach were imposed on their precincts. The backbone of the systems theory is the process of translating social, spatial and cultural desirables into mathematical models using computing, statistics, optimization and an algorithmic way of formulating and solving problems. The early universities of the West which began to train professionals in planning, spawned some of the most ingenious planners, who were experts in these domains. This was because these very subjects were absorbed into the planning curriculum that had its roots in the social sciences, geography and architecture. Planning in India, and its education differ from the West.
+                    </p>
+
+                    <!-- Question 12 -->
+                    <h1 class="questionBody tag-h1">
+                        <span>
+                            Based on the above passage, the following assumptions have been made:
+                        </span>
+                    </h1>
+
+                    <ol class="assumption-list">
+                        <li>
+                            India needs a new generation of urban professionals with knowledge relevant to modern urban practice.
+                        </li>
+                        <li>
+                            Indian universities at present have no capacity or potential to impart training in systems approach.
+                        </li>
+                    </ol>
+
+                    <h1 class="questionBody tag-h1">
+                        <span>
+                            Which of the assumptions given above is/are correct?
+                        </span>
+                    </h1>
+
+                    <div class="options">
+                        <ul class="options-list">
+
+                            <li class="option" data-option="a">
+                                <strong>(a)</strong>
+                                <span>1 only</span>
+                            </li>
+
+                            <li class="option" data-option="b">
+                                <strong>(b)</strong>
+                                <span>2 only</span>
+                            </li>
+
+                            <li class="option" data-option="c">
+                                <strong>(c)</strong>
+                                <span>Both 1 and 2</span>
+                            </li>
+
+                            <li class="option" data-option="d">
+                                <strong>(d)</strong>
+                                <span>Neither 1 nor 2</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="question-navigation">
+
+                        <a href="https://kusummathsclasses.com/pyqs/2024/2024011.html"
+                           class="question-nav-btn" id="prevQuestion">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Previous Question
+                        </a>
+
+                        <a href="https://kusummathsclasses.com/pyqs/2024/2024013.html"
+                           class="question-nav-btn" id="nextQuestion">
+                            Next Question
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="pure-g pure-u-1">
+                        <div class="pyp-box pure-g">
+
+                            <div>
+                                <h2 class="pyp-heading">Practice question</h2>
+                                <div class="pyp-title">
+                                    UPSC CSAT — Practice Set 2024
+                                </div>
+                            </div>
+
+                            <div class="pyp-bottom-bar">
+                                <div class="pyp-left-buttons">
+
+                                    <a href="https://kusummathsclasses.com/pyqs/2024/2024012.html#"
+                                       class="attempt-test-link"
+                                       aria-label="Attempt this test online">
+                                        Attempt Online
+                                    </a>
+
+                                    <button type="button"
+                                            class="solpdf-download-link active"
+                                            onclick="downloadQuestionPDF(this)">
+                                        Download Solution PDF
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="question-contact">
+                        <p>
+                            Have a doubt regarding this question?
+                            <a href="https://wa.me/917011904551?text=I%20have%20a%20doubt%20regarding%20UPSC%20CSAT%202024%20Question%2012."
+                               target="_blank" rel="noopener">
+                                Ask on WhatsApp
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            © 2026 Kusum Maths Classes · Developed by
+            <a href="https://kusummathsclasses.com/faisal-rasheed.html">
+                Faisal Rasheed
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            /* KaTeX rendering */
+            if (typeof renderMathInElement === "function") {
+
+                const mathOptions = {
+                    delimiters: [
+                        { left: "\\(", right: "\\)", display: false },
+                        { left: "\\[", right: "\\]", display: true },
+                        { left: "$$", right: "$$", display: true }
+                    ],
+                    throwOnError: false
+                };
+
+                const questionBody = document.querySelector(".questionBody");
+                const optionsList = document.querySelector(".options-list");
+
+                if (questionBody) {
+                    renderMathInElement(questionBody, mathOptions);
+                }
+
+                if (optionsList) {
+                    renderMathInElement(optionsList, mathOptions);
+                }
+            }
+
+            /* Previous and next question navigation */
+            const filename = location.pathname.split("/").pop();
+            const match = filename.match(/^(\d{4})(\d{3})\.html$/i);
+
+            if (match) {
+                const year = match[1];
+                const number = parseInt(match[2], 10);
+
+                const previous = document.getElementById("prevQuestion");
+                const next = document.getElementById("nextQuestion");
+
+                if (previous && number > 1) {
+                    previous.href =
+                        year + String(number - 1).padStart(3, "0") + ".html";
+                } else if (previous) {
+                    previous.removeAttribute("href");
+                    previous.classList.add("disabled");
+                    previous.setAttribute("aria-disabled", "true");
+                }
+
+                if (next) {
+                    next.href =
+                        year + String(number + 1).padStart(3, "0") + ".html";
+                }
+            }
+
+            /* Option selection */
+            document.querySelectorAll(".option").forEach(function (option) {
+
+                option.addEventListener("click", function () {
+
+                    document.querySelectorAll(".option").forEach(function (item) {
+                        item.classList.remove("selected");
+                    });
+
+                    this.classList.add("selected");
+                });
+
+            });
+
+            /* Mobile navigation */
+            const menuToggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            if (menuToggle && navLinks) {
+
+                menuToggle.addEventListener("click", function () {
+
+                    navLinks.classList.toggle("active");
+
+                    const expanded =
+                        this.getAttribute("aria-expanded") === "true";
+
+                    this.setAttribute("aria-expanded", String(!expanded));
+                });
+            }
+
+        });
+
+        /* Share question */
+        function shareQuestion(button) {
+
+            const shareData = {
+                title: "UPSC CSAT 2024 — Question 12",
+                text: "Practise UPSC CSAT 2024 Question 12 – Kusum Maths Classes",
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+
+                navigator.share(shareData).catch(function (error) {
+                    console.log("Sharing cancelled:", error);
+                });
+
+            } else if (navigator.clipboard) {
+
+                navigator.clipboard.writeText(window.location.href).then(function () {
+
+                    const original = button.innerHTML;
+
+                    button.innerHTML =
+                        '<i class="fa-solid fa-check"></i><span>Copied</span>';
+
+                    setTimeout(function () {
+                        button.innerHTML = original;
+                    }, 1800);
+
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
