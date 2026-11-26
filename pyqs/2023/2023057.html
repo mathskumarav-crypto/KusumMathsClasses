@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1769aa">
+
+    <title>UPSC CSAT 2023 Question 57 – Kusum Maths Classes</title>
+    <meta name="description" content="Practise UPSC CSAT logical reasoning questions based on inequalities, integers and data sufficiency. Evaluate whether the given statements are sufficient to compare algebraic expressions.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Kusum Maths Classes">
+
+    <link rel="canonical" href="https://kusummaths.com/pyqs/2023/2023057.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="UPSC CSAT 2023 — Question 57">
+    <meta property="og:description" content="Practise UPSC CSAT logical reasoning questions based on inequalities, integers and data sufficiency. Evaluate whether the given statements are sufficient to compare algebraic expressions.">
+    <meta property="og:image" content="https://kusummaths.com/logo.png">
+    <meta property="og:url" content="https://kusummaths.com/pyqs/2023/2023057.html">
+
+    <link rel="icon" href="../../logo.png">
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17701066141"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17701066141');
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Quiz",
+        "name": "UPSC CSAT 2023 Question 57",
+        "hasPart": {
+            "@type": "Question",
+            "name": "Question: Is \\((p+q-r)\\) greater than \\((p-q+r)\\), where p, q and r are integers? Statement-1: \\((p-q)\\) is positive. Statement-2: \\((p-r)\\) is negative.",
+            "text": "Question: Is \\((p+q-r)\\) greater than \\((p-q+r)\\), where p, q and r are integers? Statement-1: \\((p-q)\\) is positive. Statement-2: \\((p-r)\\) is negative.",
+            "suggestedAnswer": [
+                {
+                    "@type": "Answer",
+                    "text": "(a) The Question can be answered by using one of the Statements alone, but cannot be answered using the other Statement alone."
+                },
+                {
+                    "@type": "Answer",
+                    "text": "(b) The Question can be answered by using either Statement alone."
+                },
+                {
+                    "@type": "Answer",
+                    "text": "(c) The Question can be answered by using both the Statements together, but cannot be answered using either Statement alone."
+                },
+                {
+                    "@type": "Answer",
+                    "text": "(d) The Question cannot be answered even by using both the Statements together."
+                }
+            ]
+        }
+    }
+    </script>
+
+    <style>
+        .questionBody p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .question-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin: 22px 0;
+            padding: 14px 0;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .question-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 7px;
+            background: #1769aa;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .question-nav-btn:hover {
+            background: #0d4f85;
+            color: #fff;
+        }
+
+        #nextQuestion {
+            margin-left: auto;
+        }
+
+        .options-list .option {
+            cursor: pointer;
+        }
+
+        .options-list .option.selected {
+            outline: 2px solid var(--blue);
+            background: rgba(40,110,220,.08);
+        }
+
+        .passage-heading {
+            text-align: center !important;
+            font-weight: 700;
+            margin: 22px 0 14px;
+        }
+
+        .question-instruction {
+            font-weight: 600;
+        }
+
+        /* KaTeX size matches the surrounding text */
+        .questionBody .katex {
+            font-size: 1.1em;
+        }
+
+        /* Numbered statements and options: label + text side by side */
+        .kq-stmts {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 14px 0 20px;
+        }
+
+        .kq-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            text-align: left;
+            line-height: 1.6;
+            position: static;
+        }
+
+        .kq-lab {
+            flex: 0 0 34px;
+            font-weight: 400;
+            position: static;
+            text-align: left;
+        }
+
+        .kq-stmts .kq-lab {
+            flex-basis: 26px;
+        }
+
+        .kq-txt {
+            flex: 1 1 auto;
+            min-width: 0;
+            overflow-wrap: break-word;
+            text-align: left;
+            position: static;
+        }
+
+        @media (max-width: 480px) {
+            .kq-lab {
+                flex-basis: 30px;
+            }
+
+            .kq-stmts .kq-lab {
+                flex-basis: 22px;
+            }
+
+            .question-nav-btn {
+                padding: 9px 11px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- TOP STRIP -->
+<div class="top-strip">
+    <strong>UPSC CSAT 2023</strong> · UPSC CSAT Practice Sets
+</div>
+
+<!-- HEADER / NAVIGATION BAR -->
+<header>
+    <div class="container navbar">
+
+        <a class="logo" href="../../index.html">
+            <img src="../../logo.png" alt="Kusum Maths Classes Logo" class="logo-img">
+            <span>
+                KUSUM MATHS CLASSES
+                <small>LEARN · PRACTISE · SUCCEED</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle"
+                id="menu-toggle"
+                aria-expanded="false"
+                aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../courses.html">Courses</a>
+            <a href="../../study-material.html">Study Material</a>
+            <a href="../../pyqs.html">PYQs</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="content-wrap">
+    <div class="container">
+
+        <div class="card">
+
+            <!-- BREADCRUMB -->
+            <nav aria-label="Breadcrumb">
+                <ul class="breadcrumbs">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../courses.html">UPSC CSAT</a></li>
+                    <li><a href="../../study-material.html">CSAT Practice</a></li>
+                </ul>
+            </nav>
+
+            <article class="questionBody">
+
+                <!-- QUESTION HEADER -->
+                <div class="question__header">
+
+                    <h1 class="question_heading">
+                        UPSC CSAT 2023 — Question 57
+                    </h1>
+
+                    <button type="button"
+                            class="share-btn"
+                            onclick="shareQuestion(this)"
+                            aria-label="Share this question">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Share</span>
+                    </button>
+
+                </div>
+
+                <!-- QUESTION 57 -->
+                <p>
+                    Question: Is \((p+q-r)\) greater than \((p-q+r)\), where p, q and r are integers?<br>
+                    Statement-1: \((p-q)\) is positive.<br>
+                    Statement-2: \((p-r)\) is negative.
+                </p>
+
+                <p>
+                    <b>Which one of the following is correct in respect of the above Question and the Statements?</b>
+                </p>
+
+                <!-- OPTIONS -->
+                <ul class="options-list">
+
+                    <li class="option" data-option="a">
+                        <div class="kq-row">
+                            <div class="kq-lab">(a)</div>
+                            <div class="kq-txt">
+                                The Question can be answered by using one of the Statements
+                                alone, but cannot be answered using the other Statement alone.
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="option" data-option="b">
+                        <div class="kq-row">
+                            <div class="kq-lab">(b)</div>
+                            <div class="kq-txt">The Question can be answered by using either Statement alone.</div>
+                        </div>
+                    </li>
+
+                    <li class="option" data-option="c">
+                        <div class="kq-row">
+                            <div class="kq-lab">(c)</div>
+                            <div class="kq-txt">
+                                The Question can be answered by using both the Statements together, but cannot be answered using either Statement alone.
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="option" data-option="d">
+                        <div class="kq-row">
+                            <div class="kq-lab">(d)</div>
+                            <div class="kq-txt">The Question cannot be answered even by using both the Statements together.</div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- QUESTION NAVIGATION -->
+                <div class="question-navigation">
+
+                    <a href="2023056.html"
+                       class="question-nav-btn"
+                       id="prevQuestion">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Previous Question
+                    </a>
+
+                    <a href="2023058.html"
+                       class="question-nav-btn"
+                       id="nextQuestion">
+                        Next Question
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <!-- BOTTOM PRACTICE BAR -->
+                <div class="pure-g pure-u-1">
+
+                    <div class="pyp-box pure-g">
+
+                        <div>
+                            <h2 class="pyp-heading">Practice question</h2>
+                            <div class="pyp-title">
+                                UPSC CSAT — Practice Set 2023
+                            </div>
+                        </div>
+
+                        <div class="pyp-bottom-bar">
+
+                            <div class="pyp-left-buttons">
+
+                                <a href="2023057.html#"
+                                   class="attempt-test-link"
+                                   aria-label="Attempt this test online">
+                                    Attempt Online
+                                </a>
+
+                                <button type="button"
+                                        class="solpdf-download-link active"
+                                        onclick="downloadQuestionPDF(this)">
+                                    Download Solution PDF
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- WHATSAPP CONTACT -->
+                <div class="question-contact">
+                    <p>
+                        Have a doubt regarding this question?
+                        <a href="https://wa.me/917011904551?text=I%20have%20a%20doubt%20regarding%20UPSC%20CSAT%202023%20Question%2057."
+                           target="_blank"
+                           rel="noopener">
+                            Ask on WhatsApp
+                        </a>
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        © 2026 Kusum Maths Classes · Developed by
+        <a href="../../faisal-rasheed.html">Faisal Rasheed</a>
+    </p>
+</footer>
+
+<!-- PDF GENERATOR -->
+<script src="../../scripts/pdf-generator.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    /* KaTeX rendering */
+    if (typeof renderMathInElement === "function") {
+        renderMathInElement(document.querySelector(".questionBody"), {
+            delimiters: [
+                {left: "\\(", right: "\\)", display: false},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$$", right: "$$", display: true},
+                {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+                {left: "\\begin{align}", right: "\\end{align}", display: true},
+                {left: "$", right: "$", display: false}
+            ],
+            macros: {"\\frac": "\\dfrac{#1}{#2}"},
+            throwOnError: false
+        });
+    }
+
+    /* Option selection */
+    document.querySelectorAll(".option").forEach(function(option) {
+
+        option.addEventListener("click", function() {
+
+            document.querySelectorAll(".option").forEach(function(item) {
+                item.classList.remove("selected");
+            });
+
+            this.classList.add("selected");
+
+        });
+
+    });
+
+    /* Mobile navigation */
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    if (menuToggle && navLinks) {
+
+        menuToggle.addEventListener("click", function() {
+
+            navLinks.classList.toggle("active");
+
+            const expanded =
+                this.getAttribute("aria-expanded") === "true";
+
+            this.setAttribute("aria-expanded", String(!expanded));
+
+        });
+
+    }
+
+});
+
+/* Share question */
+function shareQuestion(button) {
+
+    const shareData = {
+        title: "UPSC CSAT 2023 — Question 57",
+        text: "Practise UPSC CSAT 2023 Question 57 on Kusum Maths Classes.",
+        url: window.location.href
+    };
+
+    if (navigator.share) {
+
+        navigator.share(shareData).catch(function(error) {
+            console.log("Sharing cancelled:", error);
+        });
+
+    } else if (navigator.clipboard) {
+
+        navigator.clipboard.writeText(window.location.href).then(function() {
+
+            const original = button.innerHTML;
+
+            button.innerHTML =
+                '<i class="fa-solid fa-check"></i><span>Copied</span>';
+
+            setTimeout(function() {
+                button.innerHTML = original;
+            }, 1800);
+
+        });
+
+    }
+
+}
+</script>
+
+</body>
+</html>
